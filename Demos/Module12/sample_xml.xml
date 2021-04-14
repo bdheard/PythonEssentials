@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<note>
+<to name="James Smith"/>
+<to name="David Smith"/>
+<to name="Claire Smith"/>
+<from>John Doe</from>
+<heading>Reminder</heading>
+<body>Don't forget me this weekend!</body>
+</note>
