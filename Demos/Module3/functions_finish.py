@@ -60,3 +60,13 @@ print(power(2))
 print(power(2,3))
 print(power(x = 3, num = 2)) #named paramets can be supplied in any order
 print(multiAdd(1,2,3,4,5))
+
+# Lambda functions
+x = 10
+y = 15
+
+def add(arg1, arg2):
+    return arg1 + arg2
+
+print(add(x,y))
+print((lambda arg1, arg2: arg1 + arg2)(x, y))

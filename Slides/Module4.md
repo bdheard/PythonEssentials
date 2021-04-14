@@ -5,20 +5,25 @@ subtitle: Python Essentials
 
 ## Overview
 
-1. Collections
+1. Lists
+1. Arrays
+1. Slicing
 1. Tuples
+1. Sets
 1. Calendar
-1. Loops
 
 ## Lists
 
-* Lists are collections of items.
-* Lists can be expanded or contracted as needed.
-* Can contain any data type.
-* Commonly used to store a single column collection of information, however it is possible to nest lists.
+- Lists are collections of items.
+- Lists can be expanded or contracted as needed.
+- Can contain any data type.
+- Commonly used to store a single column collection of information, however it is possible to nest lists.
 
 ```python
-names = ['Christopher', 'Susan']
+empty_list = []
+empty_list = list()
+
+names = ['James', 'David']
 scores = []
 scores.append(98) # Add new item to the end
 scores.append(99)
@@ -34,8 +39,9 @@ print(scores[1]) # 99
 
 ## Arrays
 
-* Arrays are collections of items
+* Arrays are collections of items.
 * Designed to store a uniform basic data type, such as integers or floating point numbers.
+* Use array module
 
 ```python
 from array import array
@@ -70,10 +76,10 @@ numpy will give you additional support
 
 :::
 
-## Common
+## Common Operations
 
 ```bash
-names = ['Susan', 'Christopher']
+names = ['James', 'David']
 print(len(names)) # Get the number of items
 names.insert(0, 'Bill') # Insert before index
 print(names)
@@ -83,18 +89,18 @@ print(names)
 
 ```
 2
-['Bill', 'Susan', 'Christopher']
-['Bill', 'Christopher', 'Susan']
+['Bill', 'James', 'David']
+['Bill', 'David', 'James']
 ```
 
 ::: notes
 sorts side effect is that it will modify the list
 :::
 
-## Retrieving Ranges
+## Slicing
 
 ```bash
-names = ['Susan', 'Christopher', 'Bill','Justin']
+names = ['James', 'David', 'Bill','Justin']
 names
 names[3]
 names[1:3]
@@ -102,10 +108,10 @@ names[:3]
 ```
 
 ```
-['Susan', 'Christopher', 'Bill','Justin']
+['James', 'David', 'Bill','Justin']
 ['Justin']
 ['Christopher', 'Bill']
-['Susan', 'Christopher', 'Bill']
+['James', 'David', 'Bill']
 ```
 
 ::: notes
@@ -117,8 +123,12 @@ names[:3]
 - Dictionaries use keys to identify each item.
 
 ```python
+empty_dictionary = {}
+empty_dictionary = dict()
+
 person = {'first': 'Christopher'}
 person['last'] = 'Harrison'
+
 print(person)
 print(person['first'])
 ```
@@ -146,51 +156,49 @@ numpy will give you additional support
 
 :::
 
-## Loop through a collection
+## Tuples
 
-```python
-for name in ['Christopher', 'Susan']:
-    print(name)
-```
-
-```
-Christopher
-Susan
-```
+- Create a tuple
+  ```pyhon
+  empty_tuple = ()
+  empty_tuple = tuple()
+  
+  tup = ('32', 4, 'yes', 3.14)
+  ```
+- Similar to lists:
+  ```python
+  tup[1:4] # (4, 'yes', 3.14)
+  ```
+- Tuples are immutable
 
 ::: notes
+
+https://docs.python.org/2/library/functions.html#tuple
+
 :::
 
-## For loops
+## Sets
 
-- For loops takes each item in an array or collection in order, and assigns it to the variable you define.
-- Loop through a collection
-    ```python
-    for name in ['Christopher', 'Susan']:
-        print(name)
-    ```
-- Loop a number of times
-    ```python
-    for index in range(0, 2):
-        print(index)
-    ```
+- Sets are unordered.
+- Set elements are unique. Duplicate elements are not allowed.
+- A set itself may be modified, but the elements contained in the set must be of an immutable type.
+- Common operations
+  - union
+  - intersect
+  - difference
 
-::: notes
-:::
+```pyhon
+empty_set = set()
 
-## While loop
-
-- While loops perform an operation as long as a condition is true.
-
-```python
-names = ['Christopher', 'Susan']
-index = 0
-while index < len(names):
-	print(names[index])
-	# Change the condition!!
-	index = index + 1
-
+set1 = {1, 5, 10, 15, 20}
+set2 = {2, 5, 11, 15, 21}
 ```
 
+![image](../media/sets.png)
+
+
 ::: notes
+
+https://realpython.com/python-sets/
+
 :::

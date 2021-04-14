@@ -4,16 +4,15 @@
 
 x = 12
 if x == 24:
- print('Is valid')
+    print('Is valid')
 else:
     print("Not valid")
 
 def helper(name='sample'):
- pass
+    pass
 
 def another(name = 'sample'):
     pass
-        pass
 
 msg = "abc"
 msg2 = 'abc'
@@ -30,3 +29,4 @@ def print_hello(name: str) -> str:
 	"""
     print('Hello, ' + name)
 
+print_hello('Daniel')

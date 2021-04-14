@@ -8,6 +8,7 @@ subtitle: Python Essentials
 1. Conditional Statments
 1. Error Handling
 1. Functions
+1. Lambda functions
 
 ## Conditional Statements
 
@@ -111,7 +112,7 @@ def get_initial(name):
 
 first_name = input('Enter your first name: ')
 first_name_initial = get_initial(first_name)
-last_name = input('Enter your last name: ')
+last_name = input('Enter your last name: ')
 last_name_initial = get_initial(last_name)
 ```
 
@@ -121,6 +122,21 @@ Enter your last name: ibach
 Your initials are: SI
 ```
 
+::: notes
+
+:::
+
+## Lambda Functions
+
+* Inline function
+* Anonymous, may not have a name
+* Frequently used with higher-order functions which take functions as argumetns
+
+![image](../media/lambda.png)
+
+```python
+(lambda x: x + 1)(2)
+```
 ::: notes
 
 :::

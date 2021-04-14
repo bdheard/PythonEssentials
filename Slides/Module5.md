@@ -1,208 +1,169 @@
 ---
-title: Lesson 5
+title: Module 5
 subtitle: Python Essentials
 ---
 
 ## Overview
 
-1. Classes
-1. Inheritance
-1. Mixins
+1. Loops
+1. Map
+1. filter
+1. Reduce
+1. List comprehensions
 
-## Classes Overview
+## For loops
 
-* Create reusable components
-* Group data and operations together
-* Classes are nouns
-* Properties are adjectives
-* Methods are verbs
+- For loops takes each item in an array or collection in order, and assigns it to the variable you define.
+- Loop through a collection
+    ```python
+    for name in ['David', 'James']:
+        print(name)
+    ```
+- Loop a number of times
+    ```python
+    for index in range(0, 2):
+        print(index)
+    ```
 
 ::: notes
-
-2. Overview of Python
-3. Flow Control
-4. Sequence Types
-5. Sorting and Slicing
-6. Functions
-7. Dictionaries and Sets
-8. Object-oriented Python
-9.  Creating and Using Modules
-10. Errors and Exception Handling
-11. Working with Files
-12. Regular Expressions
-13. Using the Standard Library
-
 :::
 
-## Creating Classes
+## While loop
+
+- While loops perform an operation as long as a condition is true.
 
 ```python
-class Presenter():
-	
-    def __init__(self, name):
-		# Constructor
-		self.name = name
-	
-    def say_hello(self):
-		# method
-		print('Hello, ' + self.name)
-    
-    @property
-	def name(self):
-		return self.__name
-	
-    @name.setter
-	def name(self, value):
-		# cool validation here
-		self.__name = value
+names = ['Christopher', 'Susan']
+index = 0
+while index < len(names):
+	print(names[index])
+	# Change the condition!!
+	index = index + 1
 
 ```
 
 ::: notes
-
 :::
 
-## Using Classes
+## Using map()
+
+- Alternative approach that’s based in functional programming.
+- You pass in a function and an iterable, and map() will create an object. 
+- This object contains the output you would get from running each iterable element through the supplied function.
 
 ```python
-presenter = Presenter('Chris')
-presenter.name = 'Christopher'
-presenter.say_hello()
-print(presenter.name)
+fruits = ["apple", "banana", "cherry"]
+newlist = []
+
+for x in fruits:
+  if "a" in x:
+    newlist.append(x.upper())
+
+print(newlist)
+```
+
+```python
+fruits = ["apple", "banana", "cherry"]
+newlist = []
+
+def copy_list(fruits):
+  return fruits.upper()
+
+newlist = map(copy_list, fruits)
+
+print(newlist)
+```
+
+```bash
+['APPLE', 'BANANA', 'MANGO']
+```
+
+::: notes
+:::
+
+## Lambda Functions
+
+- Alternative approach that’s based in functional programming.
+- You pass in a function and an iterable, and map() will create an object. 
+- This object contains the output you would get from running each iterable element through the supplied function.
+
+```python
+fruits = ["apple", "banana", "cherry"]
+newlist = []
+
+def copy_list(fruits):
+  return fruits.upper()
+
+newlist = map(copy_list, fruits)
+
+print(newlist)
+```
+
+```python
+fruits = ["apple", "banana", "cherry"]
+newlist = []
+
+def copy_list(fruits):
+  return fruits.upper()
+
+newlist = map(lamda fruits: , fruits)
+
+print(newlist)
+```
+
+```bash
+['APPLE', 'BANANA', 'MANGO']
+```
+
+::: notes
+:::
+
+## List Comprehensions
+
+- Shorter syntax when you want to create a new list based on the values of an existing list.
+- new_list = [expression for member in iterable]
+
+```python
+fruits = ["apple", "banana", "cherry"]
+newlist = []
+
+def copy_list(fruits):
+  return fruits.upper()
+
+newlist = map(copy_list, fruits)
+
+print(newlist)
+```
+
+```python
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+
+newlist = [x for x in fruits if "a" in x]
+
+print(newlist)
+```
+
+```bash
+['apple', 'banana', 'mango']
 ```
 
 ::: notes
 
-:::
+Considered more Pythonic:
+1. Can be used for mapping and filtering. You don’t have to use a different approach for each scenario.
+  This is the main reason why list comprehensions are considered Pythonic, as Python embraces simple, powerful tools that you can use in a wide variety of situations. 
+1. You don't need to remember the proper order of arguments like you would when you call map().
+1. List comprehensions are also more declarative than loops, which means they’re easier to read and understand. 
+  Loops require you to focus on how the list is created.
 
-## Accessibility in Python
+**Warning!**
+List comprehensions might make your code run more slowly or use more memory. If your code is less performant or harder to understand, then it’s probably better to choose an alternative.
 
-- **EVERYTHING is public**
-- Conventions for suggesting accessibility
-- _ means avoid unless you really know what you're doing
-- __ (double underscore) means **do not use**
+List comprehension in Python includes three elements:
 
+1. expression is the member itself, a call to a method, or any other valid expression that returns a value. In the example above, the expression i * i is the square of the member value.
+1. member is the object or value in the list or iterable. In the example above, the member value is i.
+1. iterable is a list, set, sequence, generator, or any other object that can return its elements one at a time. In the example above, the iterable is range(10).
 
-::: notes
-:::
-
-## Inheritance
-
-- Creates an "is a" relationship
-    - Student is a Person
-    - SqlConnection is a DatabaseConnection
-    - MySqlConnection is a DatabaseConnection
-- Composition (with properties) creates a "has a" relationship
-    - Student has a Class
-    - DatabaseConnection has a ConnectionString
-
-::: notes
-:::
-
-## Python Inheritance
-
-- All methods are "virtual"
-    - Can override or redefine their behavior
-- Keyword super to access parent class
-    - Constructor
-    - Properties in methods
-- Must always call parent constructor
-
-
-::: notes
-:::
-
-## Inheriting from a class
-
-```python
-class Person:
-    def __init__(self, name):
-        self.name = name
-    def say_hello(self):
-        print('Hello, ' + self.name)
-
-class Student(Person):
-    def __init__(self, name, school):
-        super().__init__(name)
-        self.school = school
-    def sing_school_song(self):
-        print('Ode to ' + self.school)
-```
-
-::: notes
-
-:::
-
-## Using a derived class
-
-```python
-student = Student('John', 'Doe')
-student.say_hello()
-student.sing_school_song()
-
-print(isinstance(student, Student))
-print(isinstance(student, Person))
-print(issubclass(Student, Person))
-```
-
-::: notes
-
-:::
-
-## Mixins
-
-- Inherit from multiple classes.
-- A little controversial.
-- Can get messy quickly.
-- Many modern languages only support single inheritance.
-- Uses:
-    - Enable functionality for frameworks such as Django.
-    - Streamline repetitious operations.
-
-::: notes
-:::
-
-## Using mixins
-
-```python
-class Loggable:
-    def __init__(self):
-        self.title = ''
-    def log(self):
-        print('Log message from ' + self.title)
-
-class Connection:
-    def __init__(self):
-        self.server = ''
-    def connect(self):
-        print('Connecting to database on ' + self.server)
-
-class SqlDatabase(Connection, Loggable):
-    def __init__(self):
-        super().__init__()
-        self.title = 'Sql Connection Demo'
-        self.server = 'Some_Server'
-
-def framework(item):
-	# Perform the connection
-    if isinstance(item, Connection):
-        item.connect()
-	# Log the operation
-    if isinstance(item, Loggable):
-        item.log()
-
-# Create an instance of our class
-sql_connection = SqlDatabase()
-# Use our framework
-framework(sql_connection) # connects and logs
-```
-
-
-::: notes
-- Create:
-    - Helper database class
-    - Create different types for different databases
-- Function: 
-    - Connect to a database
-    - Log what it's doing
+https://realpython.com/list-comprehension-python/
 :::

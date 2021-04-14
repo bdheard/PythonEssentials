@@ -1,19 +1,20 @@
 ---
-title: Lesson 0
+title: Lesson 11
 subtitle: Python Essentials
 ---
 
-## Course Sylabus
+## Overview
 
-1. Overview of Python
-1. Flow Control
-1. Sequence Types
-1. Sorting and Slicing
-1. Functions
-1. Dictionaries and Sets
-1. Object-oriented Python
-1. Creating and Using Modules
-1. Errors and Exception Handling
-1. Working with Files
 1. Regular Expressions
-1. Using the Standard Library
+
+## Regular Expressions (Regex)
+
+- Useful for finding matches to patterned
+strings.
+- Use **re** module 
+
+![image](../media/api.png)
+
+:::notes
+https://docs.python.org/2/library/re.html
+:::
