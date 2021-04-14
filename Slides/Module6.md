@@ -1,99 +1,208 @@
 ---
-title: Module 6
+title: Lesson 5
 subtitle: Python Essentials
 ---
 
 ## Overview
 
-1. Modules 
-1. Pakcages
-1. Creating Modules
+1. Classes
+1. Inheritance
+1. Mixins
 
-## Modules Overview
+## Classes Overview
 
-- A Python file with functions, classes and other components
-- Break code down into reusable structures
-- They're referenced by using the import statement.
+* Create reusable components
+* Group data and operations together
+* Classes are nouns
+* Properties are adjectives
+* Methods are verbs
 
+::: notes
+
+2. Overview of Python
+3. Flow Control
+4. Sequence Types
+5. Sorting and Slicing
+6. Functions
+7. Dictionaries and Sets
+8. Object-oriented Python
+9.  Creating and Using Modules
+10. Errors and Exception Handling
+11. Working with Files
+12. Regular Expressions
+13. Using the Standard Library
+
+:::
+
+## Creating Classes
 
 ```python
-# import module as namespace
-import helpers
-helpers.display('Not a warning')
+class Presenter():
+	
+    def __init__(self, name):
+		# Constructor
+		self.name = name
+	
+    def say_hello(self):
+		# method
+		print('Hello, ' + self.name)
+    
+    @property
+	def name(self):
+		return self.__name
+	
+    @name.setter
+	def name(self, value):
+		# cool validation here
+		self.__name = value
 
-# import all into current namespace
-from helpers import *
-display('Not a warning')
-
-# import specific items into current namespace
-from helpers import display
-display('Not a warning')
 ```
+
+::: notes
+
+:::
+
+## Using Classes
+
+```python
+presenter = Presenter('Chris')
+presenter.name = 'Christopher'
+presenter.say_hello()
+print(presenter.name)
+```
+
+::: notes
+
+:::
+
+## Accessibility in Python
+
+- **EVERYTHING is public**
+- Conventions for suggesting accessibility
+- _ means avoid unless you really know what you're doing
+- __ (double underscore) means **do not use**
+
 
 ::: notes
 :::
 
-## Packages
+## Inheritance
 
-- Modules can be distributed using a Package.
-- Pakcages are published collection of modules.
-- You can publish to, and install from pypi.org.
-- Install package with pip.
-
-
-```python
-# Install an individual package
-pip install colorama
-
-# Install from a list of packages
-pip install -r requirements.txt
-
-# requirements.txt
-colorama
-```
-
-![](../media/pypi.png)
+- Creates an "is a" relationship
+    - Student is a Person
+    - SqlConnection is a DatabaseConnection
+    - MySqlConnection is a DatabaseConnection
+- Composition (with properties) creates a "has a" relationship
+    - Student has a Class
+    - DatabaseConnection has a ConnectionString
 
 ::: notes
 :::
 
-## Virtual Environments
+## Python Inheritance
 
-- By default, packages are installed globally
-- Version management becomes a challenge
-- Virtual environments can be used to contain and manage package collections
-- Really just a folder behind the scenes with all your packages
+- All methods are "virtual"
+    - Can override or redefine their behavior
+- Keyword super to access parent class
+    - Constructor
+    - Properties in methods
+- Must always call parent constructor
 
-```python
-# Install virtual environment (global)
-pip install virtualenv
-
-# Windows systems
-python –m venv <folder_name>
-
-# OSX/Linux (bash)
-virtualenv <folder_name>
-
-```
 
 ::: notes
 :::
 
-## Using Virtual Environments
+## Inheriting from a class
 
-```bash
-# Windows systems
-# cmd.exe
-<folder_name>\Scripts\Activate.bat
-# Powershell
-<folder_name>\Scripts\Activate.ps1
-# bash shell
-. ./<folder_name>/Scripts/activate
+```python
+class Person:
+    def __init__(self, name):
+        self.name = name
+    def say_hello(self):
+        print('Hello, ' + self.name)
 
-# OSX/Linux (bash)
-<folder_name>/bin/activate
-
+class Student(Person):
+    def __init__(self, name, school):
+        super().__init__(name)
+        self.school = school
+    def sing_school_song(self):
+        print('Ode to ' + self.school)
 ```
 
 ::: notes
+
+:::
+
+## Using a derived class
+
+```python
+student = Student('John', 'Doe')
+student.say_hello()
+student.sing_school_song()
+
+print(isinstance(student, Student))
+print(isinstance(student, Person))
+print(issubclass(Student, Person))
+```
+
+::: notes
+
+:::
+
+## Mixins
+
+- Inherit from multiple classes.
+- A little controversial.
+- Can get messy quickly.
+- Many modern languages only support single inheritance.
+- Uses:
+    - Enable functionality for frameworks such as Django.
+    - Streamline repetitious operations.
+
+::: notes
+:::
+
+## Using mixins
+
+```python
+class Loggable:
+    def __init__(self):
+        self.title = ''
+    def log(self):
+        print('Log message from ' + self.title)
+
+class Connection:
+    def __init__(self):
+        self.server = ''
+    def connect(self):
+        print('Connecting to database on ' + self.server)
+
+class SqlDatabase(Connection, Loggable):
+    def __init__(self):
+        super().__init__()
+        self.title = 'Sql Connection Demo'
+        self.server = 'Some_Server'
+
+def framework(item):
+	# Perform the connection
+    if isinstance(item, Connection):
+        item.connect()
+	# Log the operation
+    if isinstance(item, Loggable):
+        item.log()
+
+# Create an instance of our class
+sql_connection = SqlDatabase()
+# Use our framework
+framework(sql_connection) # connects and logs
+```
+
+
+::: notes
+- Create:
+    - Helper database class
+    - Create different types for different databases
+- Function: 
+    - Connect to a database
+    - Log what it's doing
 :::

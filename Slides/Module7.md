@@ -1,41 +1,99 @@
 ---
-title: Lesson 7
+title: Module 6
 subtitle: Python Essentials
 ---
 
-## Course Sylabus
+## Overview
 
-1. Clean code
-1. Linting
+1. Modules 
+1. Pakcages
+1. Creating Modules
 
-## This is valid, but it is clean?
+## Modules Overview
+
+- A Python file with functions, classes and other components
+- Break code down into reusable structures
+- They're referenced by using the import statement.
+
 
 ```python
-x = 12
-if x== 24:
- print('Is valid')
-else:
-    print("Not valid")
+# import module as namespace
+import helpers
+helpers.display('Not a warning')
 
-def helper(name='sample'):
- pass
+# import all into current namespace
+from helpers import *
+display('Not a warning')
 
-def convertTouc( name = 'sample' ):
-         return name.upper()
+# import specific items into current namespace
+from helpers import display
+display('Not a warning')
 ```
 
 ::: notes
-touc: to upper case
 :::
 
-## Why clean code?
+## Packages
 
-- Makes code readable
-- Easier to debug
-- Easier to maintain by you and others
-- Consistency helps everyone
+- Modules can be distributed using a Package.
+- Pakcages are published collection of modules.
+- You can publish to, and install from pypi.org.
+- Install package with pip.
 
+
+```python
+# Install an individual package
+pip install colorama
+
+# Install from a list of packages
+pip install -r requirements.txt
+
+# requirements.txt
+colorama
+```
+
+![](../media/pypi.png)
 
 ::: notes
-touc: to upper case
+:::
+
+## Virtual Environments
+
+- By default, packages are installed globally
+- Version management becomes a challenge
+- Virtual environments can be used to contain and manage package collections
+- Really just a folder behind the scenes with all your packages
+
+```python
+# Install virtual environment (global)
+pip install virtualenv
+
+# Windows systems
+python –m venv <folder_name>
+
+# OSX/Linux (bash)
+virtualenv <folder_name>
+
+```
+
+::: notes
+:::
+
+## Using Virtual Environments
+
+```bash
+# Windows systems
+# cmd.exe
+<folder_name>\Scripts\Activate.bat
+# Powershell
+<folder_name>\Scripts\Activate.ps1
+# bash shell
+. ./<folder_name>/Scripts/activate
+
+# OSX/Linux (bash)
+<folder_name>/bin/activate
+
+```
+
+::: notes
 :::
