@@ -1,11 +1,10 @@
 # Lab 7
 
-1. ** prioritize ** Upgrade calc app to save and load the history list.
+1. Create a python virtual environment
+1. Activate your virtual environment in the VS Code terminal with VS Code itself
+1. Refactor your calculator program to be a module
+1. Invoke the calculator program from another program.
 
-2. Write to a log file for each command performed, include the datetime and the command name.
+## References:
 
-3. Upgrade the app to write the history and op count tables to a file
-
-Bonus:
-
-4. Code at least one example of using a dunder method and duck-typing. I recommend using the iter and next function to implement some kind of iteration.
+1. "Using Python environments in VS Code", https://code.visualstudio.com/docs/python/environments

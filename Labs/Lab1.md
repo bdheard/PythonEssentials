@@ -1,26 +1,19 @@
 # Lab 1
 
-## Overview
+## Tasks
 
-1. Install Python 3
-2. Install the Python Extension for VSCode
-3. Configure Settings.json
-4. Create Python virtual environment 
+1. Install latest version of Python 3.
+    - Make sure python folder is added to **path** environment variable.
+1. Install the Python Extension for VSCode.
+1. Create folder in your computer for running demos and labs.
+1. Configure Settings.json
+1. Create requirements.txt
+1. Write a hello world program to test your local environment.
+1. Consider creating a github project and pushing your code for review.
+    - Remember to set up gitignore for python
 
-## Install Python 3
-## Install the Python Extension for VSCode
-## Configure Settings.json
-## Create Python virtual environment 
-   
-1. Copy and paste the settings.json from GitHub to your local project. You may need to create the `.vscode` folder and the `settings.json` file.
+## References:
 
-2. Copy and paste the hello_world.py file from GitHub to your local project.
-
-3.  If you did not all ready do this:
-
-- Setup a .gitignore file
-- Create a requirements.txt file:
-
-```bash
-python -m pip freeze > requirements.txt
-```
+1. python.org, https://www.python.org/downloads/
+1. "Python extension for Visual Studio Code," https://marketplace.visualstudio.com/items?itemName=ms-python.python
+1. "Python debug configurations in Visual Studio Code," https://code.visualstudio.com/docs/python/debugging

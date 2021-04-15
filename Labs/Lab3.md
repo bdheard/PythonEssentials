@@ -1,9 +1,21 @@
 # Lab 3
 
-1. Using the data types and structures we have learned thus far, capture a history of the calculator commands: add, subtract, multiply, divide
+1. Enhance your simple calculator program to feature conditional statements, functions and error handling. 
 
-For each history entry, store a unique integer id (do not use external modules, just write some code to generate an id), the name of the command, and the operand value typed in. Do not track the result on the history.
+1. Build a command line program which prompts the user for a command.
 
-2. Add a new command to the calculator named "history". When the user runs the "history" command display a history of the commands. Attempt to format the table nicely.
+1. Five Commands:
 
-3. Add a new command to the calculator named "remove". When the user runs the "remove" command, ask the user for a history entry id. Then remove the history entry from the history list. Do not update the result.
+    - add : +
+    - subtract : -
+    - multiply : *
+    - divide : /
+    - clear: reset current result to 0
+    - close: exit the program
+
+1. Prompt the user for the command and the operand.
+    - Enter a command: add
+    - Please enter an operand: 10
+1. Display the result after each command.
+    - Result: <[previous result] + 10>
+
