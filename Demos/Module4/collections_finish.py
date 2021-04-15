@@ -67,15 +67,15 @@ print(courses)
 courses.sort()
 print(courses)
 
-nums = [10, 1, 5, 2, 8, 7]
-nums.sort()
-print(nums)
+numbers = [10, 1, 5, 2, 8, 7]
+numbers.sort()
+print(numbers)
 
 # sort descending order
 courses.sort(reverse = True)
-nums.sort(reverse = True)
+numbers.sort(reverse = True)
 print(courses)
-print(nums)
+print(numbers)
 
 # sort without chaning original list
 courses_sorted = sorted(courses)
@@ -83,9 +83,9 @@ print(courses_sorted)
 
 # math operations
 
-print(min(nums))
-print(max(nums))
-print(sum(nums))
+print(min(numbers))
+print(max(numbers))
+print(sum(numbers))
 
 # filtering
 print(courses.index('Arts'))

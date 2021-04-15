@@ -1,3 +1,9 @@
 # Exercise 6
 
-1. Upgrade the calc program to use classes. Please free to reorganize/restructure the code as needed to use classes effectively as was discussed in class.
+1. Refactor your simple calculator as a class
+1. Create a class called AdvancedCalculator which is derived from SimpleCalculator
+1. Only include the basic operations in SimpleCalculator.py
+1. Move the rest of the methods to AdvancedCalculator.py 
+3. Implement new methods that receive to value and returns the result: 
+    - Exponential value
+    - Square Root
