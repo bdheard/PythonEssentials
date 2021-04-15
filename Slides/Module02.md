@@ -21,8 +21,6 @@ print('Blank line \nin the middle of string')
 
 ::: notes
 
-Consistency
-
 :::
 
 ## Comments
@@ -50,7 +48,7 @@ Consistency
 
 
 ::: notes
-https://www.w3schools.com/python/python_datatypes.asp
+
 :::
 
 ## String
@@ -95,7 +93,6 @@ print(first_num + second_num) #Output: 56
 first_num = input('Enter first number ')
 second_num = input('Enter second number ')
 print(int(first_num) + int(second_num)) # Output: 11
-
 ```
 
 | Symbol  | Operation      |
@@ -107,9 +104,10 @@ print(int(first_num) + int(second_num)) # Output: 11
 | **      | Exponent       |
 
 ::: notes
-When displaying a string that contains numbers you must convert the numbers into strings.
+Notes:
 
-Numbers can be stored as stringsNumbers stored as strings are treated as strings.
-
-The input function always returns strings.
+- When displaying a string that contains numbers you must convert the numbers into strings.
+- Numbers can be stored as strings
+- Numbers stored as strings are treated as strings.
+- The input function always returns strings.
 :::

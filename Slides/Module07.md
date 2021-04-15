@@ -58,43 +58,34 @@ colorama
 ::: notes
 :::
 
-## Virtual Environments
+## Python Virtual Environment
 
-- By default, packages are installed globally
-- Version management becomes a challenge
-- Virtual environments can be used to contain and manage package collections
-- Really just a folder behind the scenes with all your packages
+- Isolated environement where to install your dependencies.
+- Create virtual environement.
 
-```python
-# Install virtual environment (global)
-pip install virtualenv
+    ```bash
+    python -m venv .venv
+    ```
 
-# Windows systems
-python –m venv <folder_name>
+- Activate virtual environement in VS Code.
 
-# OSX/Linux (bash)
-virtualenv <folder_name>
+    ![image](../media/ActivatePythonVirtualEnvironment.PNG)
 
-```
+- Activate virtual environement in command line
+    ```bash
+    .\.venv\Scripts\activate
+    ```
 
-::: notes
-:::
-
-## Using Virtual Environments
-
-```bash
-# Windows systems
-# cmd.exe
-<folder_name>\Scripts\Activate.bat
-# Powershell
-<folder_name>\Scripts\Activate.ps1
-# bash shell
-. ./<folder_name>/Scripts/activate
-
-# OSX/Linux (bash)
-<folder_name>/bin/activate
-
-```
+- Create Requirements file
+    ```bash
+    python -m pip freeze > requirements.txt
+    ```
 
 ::: notes
+
+- https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
+- https://code.visualstudio.com/docs/python/debugging
+- https://code.visualstudio.com/docs/python/environments
+
 :::
+

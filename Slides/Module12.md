@@ -39,11 +39,12 @@ subtitle: Python Essentials
 ```
 
 :::notes
-JSON Linters will format JSON so it easier to read by a human. The following website have JSON linters:
+Notes:
 
-JSONLint
-ConvertJson.com
-JSON schema linter
+JSON Linters will format JSON so it easier to read by a human. The following website have JSON linters:
+- JSONLint
+- ConvertJson.com
+- JSON schema linter
 :::
 
 ## Retriving JSON data
@@ -82,6 +83,8 @@ print(results['description']['tags'][0])
 ```
 
 :::notes
+Notes:
+
 Output:
 - John Doe
 - Doe

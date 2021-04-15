@@ -35,7 +35,9 @@ async with aiohttp.ClientSession() as session:
 ```
 :::notes
 
-with will do automatically clean up, but we don't want it to clean up before we finish our async ops. asyc tells with to remember to wait...
+Notes: 
+
+with will do automatically clean up, but we don't want it to clean up before we finish our async ops. The keyword asyc tells with to remember to wait.
 
 **Operations:**
 - run:  Runtime for asynchronous functions
@@ -57,7 +59,8 @@ with will do automatically clean up, but we don't want it to clean up before we 
 ![image](../media/api.png)
 
 :::notes
-We don't want to stop everything just because one process is taking forever
+Notes:
+We don't want to stop everything just because one process is taking forever.
 :::
 
 ## Async and Calling Web APIs
@@ -67,3 +70,6 @@ We don't want to stop everything just because one process is taking forever
 - But, almost everything in **aiohttp** is an awaitable coroutine
 	- session.request()
 	- response.text()
+
+:::notes
+:::

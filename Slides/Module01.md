@@ -11,8 +11,6 @@ subtitle: Python Essentials
 
 ::: notes
 
-TODO
-
 :::
 
 ## History
@@ -26,8 +24,6 @@ TODO
 
 ::: notes
 
-TODO
-
 :::
 
 ## Installing Python
@@ -38,8 +34,6 @@ TODO
 - Python comes with a large library of standard modules
 
 ::: notes
-
-TODO
 
 :::
 
@@ -53,8 +47,6 @@ TODO
 
 ::: notes
 
-TODO
-
 :::
 
 ## VSCode
@@ -67,8 +59,6 @@ TODO
 
 ::: notes
 
-TODO
-
 :::
 
 ## Python Programming Language
@@ -79,41 +69,10 @@ TODO
 - Python uses both processes, but because of the way programmers interact with it, it is usually considered an interpreted language.
 
 ![image](../media/interpret.png)
+
 ![image](../media/compile.png)
 
 ::: notes
 
-TODO
-
 :::
 
-## Python Virtual Environment
-
-- Isolated environement where to install your dependencies.
-- Create virtual environement.
-
-    ```bash
-    python -m venv .venv
-    ```
-
-- Activate virtual environement in VS Code.
-
-    ![image](../media/ActivatePythonVirtualEnvironment.PNG)
-
-- Activate virtual environement in command line
-    ```bash
-    .\.venv\Scripts\activate
-    ```
-
-- Create Requirements file
-    ```bash
-    python -m pip freeze > requirements.txt
-    ```
-
-::: notes
-
-- https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
-- https://code.visualstudio.com/docs/python/debugging
-- https://code.visualstudio.com/docs/python/environments
-
-:::
