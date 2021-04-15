@@ -45,6 +45,89 @@ while index < len(names):
 ::: notes
 :::
 
+## Sorting
+
+- **sorted()** can be used on lists, tuples and sets.
+- **sort()** can only be used with lists
+- **sort()** returns None and modifies the values in place
+
+```json
+persons = [
+  {'name': 'James', 'age': 50},
+  {'name': 'David', 'age': 47}
+]
+```
+Error: TypeError: '<' not supported between instances of 'dict' and 'dict' 
+
+```python
+persons.sort()
+
+print(persons)
+```
+
+Works!
+
+```python
+def sorter(item):
+    return item['name']
+
+presenters.sort(key=sorter)
+```
+
+::: notes
+:::
+
+## Filtering
+
+- filter() functional programming primitive.
+- Tests if each element of a sequence true or not.
+- Returns an iterator that is already filtered.
+
+```python
+# sequence
+sequence = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+
+def is_vowel(variable):
+    letters = ['a', 'e', 'i', 'o', 'u']
+    if (variable in letters):
+        return True
+    else:
+        return False
+  
+# using filter function
+filtered = filter(is_vowel, sequence)
+  
+print('The filtered letters are:')
+for s in filtered:
+    print(s)
+```
+
+::: notes
+:::
+
+# Reduction
+
+- **reduce()** applies a function to an iterable and reduce it to a single cumulative value.
+- Popular in functional programming.
+
+```python
+from functools import reduce
+
+def addition(a, b):
+  return = a + b
+
+numbers = [0, 1, 2, 3, 4]
+
+reduce(addition, numbers)
+```
+Output:
+```bash
+10
+```
+
+::: notes
+:::
+
 ## Using map()
 
 - Alternative approach that’s based in functional programming.

@@ -5,21 +5,9 @@ subtitle: Python Essentials
 
 ## Overview
 
-1. Calling Web APIs 
 1. Working with JSON
 1. Working with XMLA
 1. Working with HTML
-
-## Web APIs Overview
-
-- You can call functions from programs hosted on web servers.
-- Need: Address or Endpoint, method name, and parameters.
-- Use request library
-
-![image](../media/api.png)
-
-:::notes
-:::
 
 ## Working with JSON
 
