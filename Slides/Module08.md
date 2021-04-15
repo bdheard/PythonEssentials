@@ -71,6 +71,7 @@ touc: to upper case
 
 
 ::: notes
+Notes:
 https://www.python.org/dev/peps/pep-0008/
 :::
 
@@ -91,6 +92,8 @@ makeCircle(Point center, double radius)
 ```
 
 ::: notes
+Notes:
+
 Reduce number of arguments
 0: ideal
 1: ok
@@ -191,6 +194,8 @@ greeting = get_user_greeting(42)
 print(greeting)
 ```
 :::notes
+
+Notes:
 - parameter type
 - return type
 :::

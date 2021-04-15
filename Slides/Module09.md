@@ -199,6 +199,7 @@ with open('output.txt', 'wt') as stream:
 ```
 
 :::notes
-with statement in Python is used in exception handling to make the code cleaner and much more readable. It simplifies the management of common resources like file streams. Observe the following code example on how the use of with statement makes code cleaner.
+Notes:
+with statement makes the code cleaner and more readable.
 :::
 

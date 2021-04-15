@@ -232,6 +232,8 @@ print(newlist)
 
 ::: notes
 
+Notes:
+
 Considered more Pythonic:
 1. Can be used for mapping and filtering. You don’t have to use a different approach for each scenario.
   This is the main reason why list comprehensions are considered Pythonic, as Python embraces simple, powerful tools that you can use in a wide variety of situations. 
@@ -242,11 +244,4 @@ Considered more Pythonic:
 **Warning!**
 List comprehensions might make your code run more slowly or use more memory. If your code is less performant or harder to understand, then it’s probably better to choose an alternative.
 
-List comprehension in Python includes three elements:
-
-1. expression is the member itself, a call to a method, or any other valid expression that returns a value. In the example above, the expression i * i is the square of the member value.
-1. member is the object or value in the list or iterable. In the example above, the member value is i.
-1. iterable is a list, set, sequence, generator, or any other object that can return its elements one at a time. In the example above, the iterable is range(10).
-
-https://realpython.com/list-comprehension-python/
 :::

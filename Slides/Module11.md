@@ -23,6 +23,7 @@ subtitle: Python Essentials
 | sub      | Replaces one or many matches with a string                        |
 
 :::notes
+Notes:
 https://docs.python.org/2/library/re.html
 :::
 
@@ -44,6 +45,7 @@ https://docs.python.org/2/library/re.html
 | ()        | Capture and group	                                                 |                |
 
 :::notes
+Notes:
 https://docs.python.org/2/library/re.html
 :::
 
@@ -52,18 +54,17 @@ https://docs.python.org/2/library/re.html
 - A special sequence is a **\** followed by one of the characters in the list below.
 - Have special meaning.
 
-| Element        | Description                                              |
-|:--------------:|:--------------------------------------------------------:|
-| .              | This element matches any character except \n             |
-| \d             | This matches any digit [0-9]                             |
-| \D             | This matches non-digit characters [^0-9]                 |
-| \s             | This matches whitespace character [ \t\n\r\f\v]          |
-| \S             | This matches non-whitespace character [^ \t\n\r\f\v]     |
-| \w             | This matches alphanumeric character [a-zA-Z0-9_]         |
-| \W             | This matches any non-alphanumeric character [^a-zA-Z0-9] |
+| Element       | Description                                         |
+|---------------|-----------------------------------------------------|
+| .             | matches any character except \n                     |
+| d             | matches any digit [0-9]                             |
+| D             | matches non-digit characters [^0-9]                 |
+| s             | matches whitespace character [ \t\n\r\f\v]          |
+| S             | matches non-whitespace character [^ \t\n\r\f\v]     |
+| w             | matches alphanumeric character [a-zA-Z0-9_]         |
+| W             | matches any non-alphanumeric character [^a-zA-Z0-9] |
 
 :::notes
-https://docs.python.org/2/library/re.html
 :::
 
 ## Dates
@@ -87,11 +88,7 @@ print ('Birthday: ' + str(birthday_date))
 ```
 
 ::: notes
-When displaying a string that contains numbers you must convert the numbers into strings.
 
-Numbers can be stored as stringsNumbers stored as strings are treated as strings.
-
-The input function always returns strings.
 :::
 
 ## Time Zones

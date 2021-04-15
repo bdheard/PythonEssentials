@@ -54,9 +54,10 @@ print(scores[1])
 
 ::: notes
 
-from array library
-later module will talk about libraries and modules and packages.
-basically we are importing an array
+Notes:
+- from array library
+- Later module will talk about libraries and modules and packages.
+- Basically we are importing an array
 
 :::
 
@@ -71,7 +72,8 @@ basically we are importing an array
 
 ::: notes
 
-numpy will give you additional support
+Notes:
+- numpy will give you additional support
 
 :::
 
@@ -109,7 +111,7 @@ names[:3]
 ```
 ['James', 'David', 'Bill','Justin']
 ['Justin']
-['Christopher', 'Bill']
+['David', 'Bill']
 ['James', 'David', 'Bill']
 ```
 
@@ -125,16 +127,16 @@ names[:3]
 empty_dictionary = {}
 empty_dictionary = dict()
 
-person = {'first': 'Christopher'}
-person['last'] = 'Harrison'
+person = {'first': 'John'}
+person['last'] = 'Doe'
 
 print(person)
 print(person['first'])
 ```
 
 ```
-{'first': 'Christopher', 'last': 'Harrison'}
-Christopher
+{'first': 'John', 'last': 'Doe'}
+John
 ```
 
 ::: notes
@@ -150,8 +152,6 @@ Christopher
   * Storage order guaranteed
 
 ::: notes
-
-numpy will give you additional support
 
 :::
 
@@ -172,6 +172,7 @@ numpy will give you additional support
 
 ::: notes
 
+Notes:
 https://docs.python.org/2/library/functions.html#tuple
 
 :::
@@ -197,8 +198,6 @@ set2 = {2, 5, 11, 15, 21}
 
 
 ::: notes
-
-https://realpython.com/python-sets/
 
 :::
 

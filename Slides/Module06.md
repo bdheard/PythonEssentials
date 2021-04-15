@@ -19,19 +19,6 @@ subtitle: Python Essentials
 
 ::: notes
 
-2. Overview of Python
-3. Flow Control
-4. Sequence Types
-5. Sorting and Slicing
-6. Functions
-7. Dictionaries and Sets
-8. Object-oriented Python
-9.  Creating and Using Modules
-10. Errors and Exception Handling
-11. Working with Files
-12. Regular Expressions
-13. Using the Standard Library
-
 :::
 
 ## Creating Classes
@@ -199,6 +186,9 @@ framework(sql_connection) # connects and logs
 
 
 ::: notes
+
+Notes:
+
 - Create:
     - Helper database class
     - Create different types for different databases

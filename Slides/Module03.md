@@ -88,15 +88,16 @@ finally:
 ```
 
 ::: notes
-handle from more specific to more generic
+Notes:
 
-when to use:
-* User input
-* Accessing an external system
-* REST call
-* File system
+- handle from more specific to more generic
 
-what to do
+- When to use:
+    - User input
+    - Accessing an external system
+    - REST call
+    - File system
+
 :::
 
 ## Functions
