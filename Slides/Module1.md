@@ -1,15 +1,13 @@
 ---
-title: Module 1
+title: Lesson 1
 subtitle: Python Essentials
 ---
 
-## Module Sylabus
-
 ## Overview
 
-- History
-- Installing & Running Python
-- Working with Python using VSCode
+1. History
+1. Installing & Running Python
+1. Working with Python using VSCode
 
 ::: notes
 

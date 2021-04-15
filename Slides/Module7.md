@@ -1,13 +1,14 @@
 ---
-title: Module 6
+title: Lesson 7
 subtitle: Python Essentials
 ---
 
 ## Overview
 
-1. Modules 
+1. Using modules 
 1. Pakcages
-1. Creating Modules
+1. Creating modules
+1. Python virtual environment
 
 ## Modules Overview
 

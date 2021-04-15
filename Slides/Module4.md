@@ -1,5 +1,5 @@
 ---
-title: Module 4
+title: Lesson 4
 subtitle: Python Essentials
 ---
 
@@ -10,7 +10,6 @@ subtitle: Python Essentials
 1. Slicing
 1. Tuples
 1. Sets
-1. Calendar
 
 ## Lists
 
@@ -202,3 +201,5 @@ set2 = {2, 5, 11, 15, 21}
 https://realpython.com/python-sets/
 
 :::
+
+
