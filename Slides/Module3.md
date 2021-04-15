@@ -1,9 +1,9 @@
 ---
-title: Module 3
+title: Lesson 3
 subtitle: Python Essentials
 ---
 
-## Module Overview
+## Overview
 
 1. Conditional Statments
 1. Error Handling

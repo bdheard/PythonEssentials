@@ -1,5 +1,5 @@
 ---
-title: Lesson 5
+title: Lesson 6
 subtitle: Python Essentials
 ---
 

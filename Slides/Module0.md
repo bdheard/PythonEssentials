@@ -3,7 +3,7 @@ title: Lesson 0
 subtitle: Python Essentials
 ---
 
-## Course Sylabus
+## Sylabus
 
 1. Overview of Python
 1. Flow Control

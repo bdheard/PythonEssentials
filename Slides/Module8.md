@@ -1,9 +1,9 @@
 ---
-title: Lesson 7
+title: Lesson 8
 subtitle: Python Essentials
 ---
 
-## Course Sylabus
+## Overview
 
 1. Clean code
 1. Linting
