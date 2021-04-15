@@ -123,6 +123,24 @@ if (employee.isEligibleForFullBenefits())
 ::: notes
 :::
 
+## Documentation
+
+- String literal in the first statement in a module, function, class, or method definition.
+- Used for documentation.
+
+```python
+def print_hello(user_name: str) -> str:
+    """
+    Generates a greeting to the user by name
+
+	Parameters:
+		user_name (str): The name of the user
+	Returns:
+		str: The greeting
+	"""
+	return 'Hello, ' + name
+```
+
 ## Classes
 
 - Should be small
