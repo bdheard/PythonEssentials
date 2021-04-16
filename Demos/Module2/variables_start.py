@@ -18,3 +18,7 @@
 # Global vs. local variables in functions
 
 # delete definition of variable previously declared
+
+# data type casting
+
+# comparing float numbers
