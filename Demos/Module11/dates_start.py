@@ -5,6 +5,7 @@
 def main():
     
     # today's date
+    print()
 
     # select date's components
 

@@ -6,7 +6,7 @@ from datetime import datetime
 
 def main():
 
-    # Format time and dates with predefine string contrl codes
+    # Format time and dates with predefine string control codes
     now = datetime.now()
 
     # %y / %Y -> Year

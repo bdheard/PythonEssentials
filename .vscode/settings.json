@@ -4,15 +4,23 @@
     "python.linting.enabled": true,
     "cSpell.ignoreWords": [
         "'car",
+        "aeiou",
         "blue",
         "blue'car",
         "blue\\'car",
         "car",
         "carwindow",
+        "piiig",
         "r'blue"
     ],
     "cSpell.words": [
+        "aiohttp",
+        "astimezone",
+        "asyncio",
+        "isalpha",
         "isinstance",
-        "repr"
+        "pytz",
+        "repr",
+        "timeit"
     ]
 }

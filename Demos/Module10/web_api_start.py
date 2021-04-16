@@ -9,6 +9,7 @@ def load_data(delay):
     print(f'Starting {delay} second timer')
     text = requests.get(f'http://httpbin.org/delay/{delay}').text
     print(f'Completed {delay} second timer')
+    return text
 
 def run_demo():
     start_time = default_timer()

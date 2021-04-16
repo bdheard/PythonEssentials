@@ -2,6 +2,7 @@
 # Example file for classes
 #
 
+# create one class
 class myClass():
     # self is like this keyword in JS or c#
     def method1(self):
@@ -10,6 +11,7 @@ class myClass():
     def method2(self, someString):
         print("myClass method2 " + someString)
 
+# create another class
 class anotherClass(myClass):
     # self is like this keyword in JS or c#
     def method1(self):
@@ -21,6 +23,8 @@ class anotherClass(myClass):
         print("anotherClass method2 ")
 
 def main():
+    
+    # use classes
     # python runtime automatically supplies the self object
     c = myClass()
     c.method1()

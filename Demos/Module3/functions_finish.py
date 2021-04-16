@@ -14,7 +14,7 @@ def someFunction():
     print(x)
 
 someFunction()
-print(i)
+#print(i) Error!
 print(x)
 
 # define a basic function
@@ -32,12 +32,12 @@ def cube(arg1):
 # function with default value for an argument
 def power(num, x = 1):
     result = 1
-    for i in range(x):
+    for num in range(x):
         result = result * num
     return result
 
 
-#functin wiht variable number of arguments
+#function with variable number of arguments
 def multiAdd(*args):
     result = 0
     for x in args:
@@ -58,7 +58,7 @@ print(cube)
 
 print(power(2))
 print(power(2,3))
-print(power(x = 3, num = 2)) #named paramets can be supplied in any order
+print(power(x = 3, num = 2)) #named parameter can be supplied in any order
 print(multiAdd(1,2,3,4,5))
 
 # Lambda functions

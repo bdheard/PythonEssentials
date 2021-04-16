@@ -2,6 +2,8 @@
 # Async
 #
 
+# Synchronous logic 
+
 import time
 
 def count():

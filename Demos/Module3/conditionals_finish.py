@@ -15,19 +15,19 @@ def main():
 
     print (st)
 
-    # NOTE: No swtich statment
+    # NOTE: No switch statement
 
-    # conditional statemtns let you use "a if C else b"
+    # conditional statements let you use "a if C else b"
     st = "x is less than y" if (x < y) else "x is greater than or the same as y"
 
     print (st)
 
     # conditional logic with IN operator
     city = 'Raleigh'
-    if country in ('Raleigh','Charlotte', 'Ashville'):
-        print('You live in North Carolina')
+    if city in ('Raleigh','Charlotte', 'Asheville'):
+        print('You live in North Carolina')
     else:
-        print('Not sure where you live')
+        print('Not sure where you live')
 
 if __name__ == "__main__":
     main()

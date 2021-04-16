@@ -32,6 +32,6 @@ ExecuteInDir
 }
 ```
 
-### Debuger
+### Debugger
 
 https://code.visualstudio.com/docs/python/debugging
