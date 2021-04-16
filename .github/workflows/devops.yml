@@ -1,6 +1,10 @@
 name: DevOps
 
-on: [push]
+on: 
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
 
 jobs:
   build:
@@ -10,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.9
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v2
       with:
         python-version: 3.9
     - name: Install dependencies
@@ -27,3 +31,11 @@ jobs:
       with:
         name: pylint report
         path: pylint.txt
+    - name: Run python files
+      run: |
+        python test_demos.py | tee test_demos.txt
+    - name: Upload test_demos.txt as artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: demos output report
+        path: test_demos.txt

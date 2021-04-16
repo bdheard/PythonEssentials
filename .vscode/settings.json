@@ -17,12 +17,14 @@
         "aiohttp",
         "astimezone",
         "asyncio",
+        "chdir",
         "egrep",
         "isalpha",
         "isinstance",
         "pytz",
         "regextype",
         "repr",
+        "runpy",
         "timeit",
         "xargs"
     ]
