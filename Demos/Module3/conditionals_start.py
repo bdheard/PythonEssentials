@@ -7,7 +7,7 @@ def main():
 
     # conditional flow uses if, elif, else
 
-    # conditional statemtns let you use "a if C else b"
+    # conditional statements let you use "a if C else b"
 
     # conditional logic with IN operator
 

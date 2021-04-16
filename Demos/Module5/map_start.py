@@ -9,10 +9,10 @@ price_list = [1.09, 23.56, 57.84, 4.56, 6.78]
 TAX_RATE = .08
 
 
-# create functin that will handle work
+# create function that will handle work
 
 
-# invoke map to trasform the list
+# invoke map to transform the list
 
 
 # display list

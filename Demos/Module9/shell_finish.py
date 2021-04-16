@@ -10,7 +10,7 @@ from zipfile import ZipFile
 
 def main():
    
-   # duplicate file
+   # check if path exists
    if path.exists("textfile.txt"):
        # get paths to source and destinaton
        file_source = path.realpath("textfile.txt")
@@ -27,7 +27,7 @@ def main():
        if not path.exists("newfile.txt"):
         os.rename("textfile.txt","newfile.txt")
 
-       # compresed directory into zip file
+       # compressed directory into zip file
        file_source = path.realpath("textfile.txt.bak")
        root_dir, tail = path.split(file_source)
        shutil.make_archive("archive_dir","zip", root_dir)

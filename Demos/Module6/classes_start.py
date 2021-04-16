@@ -2,8 +2,10 @@
 # Example file for classes
 #
 
-def main():
+# create one class
 
 
-if __name__ == "__main__":
-    main()
+# create another class
+
+
+# use classes

@@ -8,7 +8,7 @@ price_list = [1.09, 23.56, 57.84, 4.56, 6.78]
 # define tax rate
 TAX_RATE = .08
 
-# create functin that will handle work
+# create function that will handle work
 def get_price_with_tax(price_list):
     return price_list * (1 + TAX_RATE)
 

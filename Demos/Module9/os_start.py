@@ -8,6 +8,7 @@ import time
 
 def main():
     # Print the name of the OS
+    print()
 
     # Check for if an item exists and what is its type
 

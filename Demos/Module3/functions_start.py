@@ -11,4 +11,4 @@
 # function with default value for an argument
 
 
-#functin wiht variable number of arguments
+#function with variable number of arguments

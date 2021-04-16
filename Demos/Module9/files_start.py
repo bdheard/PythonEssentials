@@ -2,7 +2,7 @@
 # Files
 #
 
-# open a file for writing tand create it if doesn't exist
+# open a file for writing and create it if doesn't exist
 
 
 # write to file
@@ -14,10 +14,10 @@
 # open the file for appending text to the end 
 
 
-# write additonal data to file
+# write additional data to file
 
 
-# open a file for reading if it was opened successfuly the whole thing in one go
+# open a file for reading if it was opened successfully the whole thing in one go
 
 
 # read one line at a time
