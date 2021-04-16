@@ -39,3 +39,6 @@ jobs:
       with:
         name: demos output report
         path: test_demos.txt
+    - name: Publish 
+      shell: powershell
+      run: .\publish_slides.ps1
