@@ -17,10 +17,13 @@
         "aiohttp",
         "astimezone",
         "asyncio",
+        "egrep",
         "isalpha",
         "isinstance",
         "pytz",
+        "regextype",
         "repr",
-        "timeit"
+        "timeit",
+        "xargs"
     ]
 }
