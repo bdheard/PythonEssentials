@@ -35,3 +35,18 @@ param1 = "12.10"
 param2 = "8.10"
 
 print(float(param1) + float(param2))
+
+# comparing float numbers
+
+if 1.1 + 2.2 == 3.3:
+    print("1.1 + 2.2 == 3.3")
+else:
+    print("1.1 + 2.2 != 3.3")
+
+tolerance = 0.00001
+
+if abs((1.1 + 2.2) - 3.3) < tolerance:
+    print("1.1 + 2.2 == 3.3")
+else:
+    print("1.1 + 2.2 != 3.3")
+
