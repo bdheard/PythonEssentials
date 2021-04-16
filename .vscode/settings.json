@@ -1,5 +1,18 @@
 {
     "python.terminal.activateEnvironment": true,
     "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true
+    "python.linting.enabled": true,
+    "cSpell.ignoreWords": [
+        "'car",
+        "blue",
+        "blue'car",
+        "blue\\'car",
+        "car",
+        "carwindow",
+        "r'blue"
+    ],
+    "cSpell.words": [
+        "isinstance",
+        "repr"
+    ]
 }
