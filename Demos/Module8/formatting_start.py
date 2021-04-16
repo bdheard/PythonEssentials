@@ -29,4 +29,4 @@ def print_hello(name) :
 	"""
     print('Hello, ' + name)
 
-print_hello(12)
+# print_hello(12) #throws error!

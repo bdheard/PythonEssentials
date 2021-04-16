@@ -28,7 +28,7 @@ print('''Ben: "How are you?" Ben's car.''')
 
 # delete definition of variable previously declared
 del i 
-print(i)
+#print(i)
 
 # data type casting
 param1 = "12.10"

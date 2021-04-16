@@ -13,11 +13,11 @@ print("Pi is:", math.pi)
 # install colorama using requirements.txt
 
 # import custom module
-import helpers
+# import helpers
 
-helpers.display("Sample message", True)
+# helpers.display("Sample message", True)
 
-# import custom module and specify function
-from helpers import display
+# # import custom module and specify function
+# from helpers import display
 
-display("Sample message", False)
+# display("Sample message", False)

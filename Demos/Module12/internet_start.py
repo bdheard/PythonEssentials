@@ -6,7 +6,7 @@
 def main():
     
     # try to connect to google.com
-
+    print()
     
     # read status code
 
