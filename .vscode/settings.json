@@ -18,13 +18,18 @@
         "astimezone",
         "asyncio",
         "chdir",
+        "dateutil",
         "egrep",
+        "findall",
         "isalpha",
         "isinstance",
+        "metacharacters",
         "pytz",
         "regextype",
         "repr",
         "runpy",
+        "strptime",
+        "timedelta",
         "timeit",
         "xargs"
     ]

@@ -56,11 +56,11 @@ https://docs.python.org/2/library/re.html
 
 | Element       | Description                                         |
 |---------------|-----------------------------------------------------|
-| .             | matches any character except \n                     |
+| .             | matches any character except n                     |
 | d             | matches any digit [0-9]                             |
 | D             | matches non-digit characters [^0-9]                 |
-| s             | matches whitespace character [ \t\n\r\f\v]          |
-| S             | matches non-whitespace character [^ \t\n\r\f\v]     |
+| s             | matches whitespace character [ t n r f v]          |
+| S             | matches non-whitespace character [^ t n r f v]     |
 | w             | matches alphanumeric character [a-zA-Z0-9_]         |
 | W             | matches any non-alphanumeric character [^a-zA-Z0-9] |
 

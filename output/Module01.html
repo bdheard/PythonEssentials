@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Lesson 1</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/black.css" id="theme">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Lesson 1</h1>
+  <p class="subtitle">Python Essentials</p>
+</section>
+
+<section id="overview" class="slide level2">
+<h2>Overview</h2>
+<ol type="1">
+<li>History</li>
+<li>Installing &amp; Running Python</li>
+<li>Working with Python using VSCode</li>
+</ol>
+<aside class="notes">
+
+</aside>
+</section>
+<section id="history" class="slide level2">
+<h2>History</h2>
+<ul>
+<li>Invented in the Netherlands, early 90s by Guido van Rossum</li>
+<li>Named after Monty Python</li>
+<li>Open sourced</li>
+<li>Designed to be human readable</li>
+<li>Scalable, object oriented and functional from the beginning</li>
+<li>Active community</li>
+</ul>
+<aside class="notes">
+
+</aside>
+</section>
+<section id="installing-python" class="slide level2">
+<h2>Installing Python</h2>
+<ul>
+<li>Python is pre-installed on most Unix systems, Linux and MAC OS X</li>
+<li>The pre-installed version may not be the most recent one</li>
+<li>Download from http://python.org/download/</li>
+<li>Python comes with a large library of standard modules</li>
+</ul>
+<aside class="notes">
+
+</aside>
+</section>
+<section id="running-python" class="slide level2">
+<h2>Running Python</h2>
+<ul>
+<li>Considered a scripting language, but is much more</li>
+<li>Python interpreter evaluates each expression</li>
+<li>Python also has mechanisms to allow a python program to act both as a script and as a module to be imported and used by another python program</li>
+</ul>
+<p><img data-src="../media/PythonOrg.png" /></p>
+<aside class="notes">
+
+</aside>
+</section>
+<section id="vscode" class="slide level2">
+<h2>VSCode</h2>
+<ul>
+<li>There are several options for an IDE.</li>
+<li>We will use VSCode as our primary IDE.</li>
+<li>Python extension available.</li>
+</ul>
+<p><img data-src="../media/VSCodePythonExtension.png" /></p>
+<aside class="notes">
+
+</aside>
+</section>
+<section id="python-programming-language" class="slide level2">
+<h2>Python Programming Language</h2>
+<ul>
+<li>Two kinds of programs process high-level languages into low-level languages: interpreters and compilers.</li>
+<li>An interpreter reads a high-level program and executes it.</li>
+<li>A compiler reads the program and translates it completely into an executable before the program starts running.</li>
+<li>Python uses both processes, but because of the way programmers interact with it, it is usually considered an interpreted language.</li>
+</ul>
+<figure>
+<img data-src="../media/interpret.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<figure>
+<img data-src="../media/compile.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<aside class="notes">
+
+</aside>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  // reveal.js plugins
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
