@@ -39,6 +39,8 @@ jobs:
       with:
         name: demos output report
         path: test_demos.txt
+    - name: Install pandoc
+      uses: r-lib/actions/setup-pandoc@v1
     - name: Publish 
       shell: pwsh
       run: .\publish_slides.ps1
