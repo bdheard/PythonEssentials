@@ -10,5 +10,6 @@
 
 # function with default value for an argument
 
-
 #function with variable number of arguments
+
+# Lambda functions
