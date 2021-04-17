@@ -221,8 +221,7 @@ y = x
 1. [ ] Two objects, two references
 1. [X] One object, two references
 
-**Which of the following styles does PEP8 recommend for multi-word variable names:**
-
+**PEP8 recommend which of the following styles for multi-word variable names:**
 
 1. [ ] customerFirstName (Camel Case)
 1. [ ] CustomerFirstName (Pascal Case)

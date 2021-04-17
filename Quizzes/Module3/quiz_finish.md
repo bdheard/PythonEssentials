@@ -196,3 +196,14 @@ What are the common functional programming methods that use lambdas? Select all 
 1. [X] filter()
 1. [X] reduce()
 
+**What would be the output of the following code snippet?**
+
+```python
+(lambda x: (x + 6) * 10 / 4)(6)
+```
+
+1. [ ] 60.0
+1. [ ] SyntaxError
+1. [ ] 0
+1. [X] 30.0
+
