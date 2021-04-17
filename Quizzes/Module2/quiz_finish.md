@@ -177,3 +177,54 @@ x = x * 5
 
 1. [X] True
 1. [ ] False
+
+**The Python Enhancement Proposal (PEP) that enumerates stylistic guidelines for Python code is:**
+
+1. [ ] PEP 8000
+1. [X] PEP 8
+1. [ ] PEP 257
+1. [ ] PEP 20
+
+**Explanation:**
+The Style Guide for Python Code is outlined in PEP 8. Related information on Docstring Conventions is specified in PEP 257.
+
+For a list of other PEPs, see the Index of PEPs.
+
+**The following code will run successfully without error:**
+
+```python
+x, y = 1, 2
+    z = 3
+
+print(x, y, z)
+```
+1. [ ] True
+1. [X] False
+
+**Variables must be declared before they are assigned a value.**
+
+1. [ ] True
+1. [X] False
+
+**Variables may be assigned a value of one type, and after be assigned a value of a different type.**
+
+1. [X] True
+1. [ ] False
+
+**How many objects and how many references are created by this program?**
+
+x = 100
+y = x
+
+1. [ ] One object, one reference
+1. [ ] Two objects, one reference
+1. [ ] Two objects, two references
+1. [X] One object, two references
+
+**Which of the following styles does PEP8 recommend for multi-word variable names:**
+
+
+1. [ ] customerFirstName (Camel Case)
+1. [ ] CustomerFirstName (Pascal Case)
+1. [X] customer_first_name (Snake Case)
+1. [ ] customer-first-name (Kebab Case)
