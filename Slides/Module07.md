@@ -63,8 +63,8 @@ colorama
 
 ## Creating Packages
 
-- The **__init__.py** files tell Python to treat directories containing the file as packages.
-- The __init__.py can be an empty file, but it can also execute initialization code for the package.
+- The ```__init__.py``` files tell Python to treat directories containing the file as packages.
+- The ```__init__.py``` can be an empty file, but it can also execute initialization code for the package.
 
 ```
 PythonEssentials/
@@ -74,7 +74,7 @@ PythonEssentials/
                             simple_calculator.py
                             advanced_calculator.py
                 parsers/
-                            __init_.py
+                            __init__.py
                             console_input_parser.py
                             console_output_parser.py
                             file_input_parser.py
