@@ -54,8 +54,8 @@ print('Blank line \nin the middle of string')
 ## String
 
 ```python
-first_name = 'Susan'
-last_name = 'Ibach'
+first_name = 'John'
+last_name = 'Doe'
 print(first_name + last_name)
 print('Hello ' + first_name + ' ' + last_name)
 print('Hello {} {}'.format(first_name, last_name))
@@ -98,7 +98,7 @@ print(int(first_num) + int(second_num)) # Output: 11
 | Symbol  | Operation      |
 |---------|----------------|
 | +       | Addition       |
-| -       | Substraction   |
+| -       | Subtraction   |
 | *       | Multiplication |
 | /       | Division       |
 | **      | Exponent       |

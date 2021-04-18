@@ -5,7 +5,7 @@ subtitle: Python Essentials
 
 ## Overview
 
-1. Conditional Statments
+1. Conditional Statements
 1. Error Handling
 1. Functions
 1. Lambda functions
@@ -88,8 +88,9 @@ finally:
 ```
 
 ::: notes
-Notes:
 
+Notes:
+- built-in Exceptions: https://docs.python.org/3/library/exceptions.html
 - handle from more specific to more generic
 
 - When to use:
@@ -102,9 +103,9 @@ Notes:
 
 ## Functions
 
-* Recover from error state
-* Logging
-* Graceful exit
+* Encapsulate Logic.
+* Can receive none, one or more input parameters.
+* Can return values.
 
 ```python
 def get_initial(name):
@@ -118,8 +119,8 @@ last_name_initial = get_initial(last_name)
 ```
 
 ```
-Enter your first name: susan
-Enter your last name: ibach
+Enter your first name: John
+Enter your last name: Doe
 Your initials are: SI
 ```
 
@@ -131,7 +132,7 @@ Your initials are: SI
 
 * Inline function
 * Anonymous, may not have a name
-* Frequently used with higher-order functions which take functions as argumetns
+* Frequently used with higher-order functions which take functions as arguments
 
 ![image](../media/lambda.png)
 

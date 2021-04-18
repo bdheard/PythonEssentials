@@ -118,6 +118,38 @@ names[:3]
 ::: notes
 :::
 
+## Sorting
+
+- **sorted()** can be used on lists, tuples and sets.
+- **sort()** can only be used with lists
+- **sort()** returns None and modifies the values in place
+
+```json
+persons = [
+  {'name': 'James', 'age': 50},
+  {'name': 'David', 'age': 47}
+]
+```
+Error: TypeError: '<' not supported between instances of 'dict' and 'dict' 
+
+```python
+persons.sort()
+
+print(persons)
+```
+
+Works!
+
+```python
+def sorter(item):
+    return item['name']
+
+presenters.sort(key=sorter)
+```
+
+::: notes
+:::
+
 ## Dictionaries
 
 - Dictionaries are key/value pairs of a collection of items.

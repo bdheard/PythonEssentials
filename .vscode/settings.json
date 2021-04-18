@@ -1,5 +1,5 @@
 {
-    "python.terminal.activateEnvironment": true,
+    "python.terminal.integratedEnvironment": true,
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
     "cSpell.ignoreWords": [
@@ -14,18 +14,23 @@
         "r'blue"
     ],
     "cSpell.words": [
+        "Loggable",
         "aiohttp",
         "astimezone",
         "asyncio",
         "axyb",
+        "bytearray",
         "chdir",
         "dateutil",
         "egrep",
         "elif",
+        "f'Hello",
         "findall",
+        "frozenset",
         "isalpha",
         "isdigit",
         "isinstance",
+        "memoryview",
         "metacharacters",
         "pytz",
         "regextype",
@@ -35,5 +40,6 @@
         "timedelta",
         "timeit",
         "xargs"
-    ]
+    ],
+    "python.pythonPath": "c:\\src\\git\\PythonEssentials\\.venv\\Scripts\\python.exe"
 }
