@@ -28,12 +28,12 @@ pandoc -t revealjs -s Module10.md -o ..\output\Module10.html
 pandoc -t revealjs -s Module11.md -o ..\output\Module11.html
 pandoc -t revealjs -s Module12.md -o ..\output\Module12.html
 
-# Rename-Item -Path "slides\module1.md" -NewName "Module01.md" -Force
-# Rename-Item -Path "slides\module2.md" -NewName "Module02.md" -Force
-# Rename-Item -Path "slides\module3.md" -NewName "Module03.md" -Force
-# Rename-Item -Path "slides\module4.md" -NewName "Module04.md" -Force
-# Rename-Item -Path "slides\module5.md" -NewName "Module05.md" -Force
-# Rename-Item -Path "slides\module6.md" -NewName "Module06.md" -Force
-# Rename-Item -Path "slides\module7.md" -NewName "Module07.md" -Force
-# Rename-Item -Path "slides\module8.md" -NewName "Module08.md" -Force
-# Rename-Item -Path "slides\module9.md" -NewName "Module09.md" -Force
+# Rename-Item -Path "labs\Lab1.md" -NewName "Lab01.md" -Force
+# Rename-Item -Path "labs\Lab2.md" -NewName "Lab02.md" -Force
+# Rename-Item -Path "labs\Lab3.md" -NewName "Lab03.md" -Force
+# Rename-Item -Path "labs\Lab4.md" -NewName "Lab04.md" -Force
+# Rename-Item -Path "labs\Lab5.md" -NewName "Lab05.md" -Force
+# Rename-Item -Path "labs\Lab6.md" -NewName "Lab06.md" -Force
+# Rename-Item -Path "labs\Lab7.md" -NewName "Lab07.md" -Force
+# Rename-Item -Path "labs\Lab8.md" -NewName "Lab08.md" -Force
+# Rename-Item -Path "labs\Lab9.md" -NewName "Lab09.md" -Force

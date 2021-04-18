@@ -196,3 +196,30 @@ Notes:
     - Connect to a database
     - Log what it's doing
 :::
+
+
+## Enumerators
+- Set of names bound to unique, constant values. 
+- **name** keyword displays the name of the enum.
+- Use **type()** to check the enum types
+- import **enum**
+
+```python
+import enum
+class Colour(enum.Enum):
+    RED = 1
+    GREEN = 2
+    BLUE = 3
+
+print(c is Colour.RED)
+```
+
+```bash
+True
+```
+
+
+::: notes
+Notes:
+
+:::
