@@ -21,6 +21,7 @@
         "axyb",
         "bytearray",
         "chdir",
+        "colorama",
         "dateutil",
         "egrep",
         "elif",
@@ -32,6 +33,7 @@
         "isinstance",
         "memoryview",
         "metacharacters",
+        "pypi",
         "pytz",
         "regextype",
         "repr",
@@ -39,6 +41,7 @@
         "strptime",
         "timedelta",
         "timeit",
+        "venv",
         "xargs"
     ],
     "python.pythonPath": "c:\\src\\git\\PythonEssentials\\.venv\\Scripts\\python.exe"
