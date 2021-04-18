@@ -6,15 +6,17 @@ subtitle: Python Essentials
 ## Overview
 
 1. Using modules 
-1. Pakcages
+1. Packages
 1. Creating modules
 1. Python virtual environment
 
 ## Modules Overview
 
-- A Python file with functions, classes and other components
-- Break code down into reusable structures
-- They're referenced by using the import statement.
+- A Python file with functions, classes and other components.
+- Break code down into reusable structures.
+- Referenced by using the import statement.
+- It is customary but not required to place all import statements at the beginning of a module.
+- To speed up loading modules, Python caches the compiled version of each module in the **__pycache__** directory under the name module.version.pyc
 
 
 ```python
@@ -37,7 +39,8 @@ display('Not a warning')
 ## Packages
 
 - Modules can be distributed using a Package.
-- Pakcages are published collection of modules.
+- A Package is a published collection of modules.
+- Defines a namespace like PythonEssentials.Calculator
 - You can publish to, and install from pypi.org.
 - Install package with pip.
 
@@ -58,20 +61,46 @@ colorama
 ::: notes
 :::
 
+## Creating Packages
+
+```
+PythonEssentials/
+                __init__.py
+                calculators/
+                            __init__.py
+                            simple_calculator.py
+                            advanced_calculator.py
+                parsers/
+                            __init_.py
+                            console_input_parser.py
+                            console_output_parser.py
+                            file_input_parser.py
+                            file_output_parser.py
+```
+```python
+import python_essentials.calculators.simple_calculator
+from python_essentials.parsers import console_input_parser, console_output_parser
+```
+
+![](../media/pypi.png)
+
+::: notes
+:::
+
 ## Python Virtual Environment
 
-- Isolated environement where to install your dependencies.
-- Create virtual environement.
+- Isolated environment where to install your dependencies.
+- Create virtual environnement.
 
     ```bash
     python -m venv .venv
     ```
 
-- Activate virtual environement in VS Code.
+- Activate virtual environment in VS Code.
 
     ![image](../media/ActivatePythonVirtualEnvironment.PNG)
 
-- Activate virtual environement in command line
+- Activate virtual environment in command line
     ```bash
     .\.venv\Scripts\activate
     ```
