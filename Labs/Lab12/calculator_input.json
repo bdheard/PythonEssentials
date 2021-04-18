@@ -1,0 +1,9 @@
+{"operation":"ADD", "first":"10", "second":"20"}
+{"operation":"SUB", "first":"50", "second":"10"}
+{"operation":"MUL", "first":"10", "second":"10"}
+{"operation":"ADD", "first":"10", "second":"20"}
+{"operation":"SUB", "first":"50", "second":"10"}
+{"operation":"MUL", "first":"10", "second":"10"}
+{"operation":"STOCK", "first":"AXP", "second":"0"}
+{"operation":"STOCK", "first":"ANF", "second":"0"}
+{"operation":"STOCK", "first":"GPS", "second":"0"}
