@@ -63,6 +63,9 @@ colorama
 
 ## Creating Packages
 
+- The **__init__.py** files tell Python to treat directories containing the file as packages.
+- The __init__.py can be an empty file, but it can also execute initialization code for the package.
+
 ```
 PythonEssentials/
                 __init__.py
