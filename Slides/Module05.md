@@ -45,6 +45,16 @@ while index < len(names):
 ::: notes
 :::
 
+## Terminate loop
+
+- **break** terminates loop and proceeds to the first statement following the loop.
+- **continue** terminates the current loop iteration and jumps to the top of the loop.
+
+![](..\media\break_continue.png)
+
+::: notes
+:::
+
 ## Filtering
 
 - filter() functional programming primitive.

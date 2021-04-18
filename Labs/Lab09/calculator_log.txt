@@ -1,0 +1,13 @@
+ADD	1	2
+ADD	2	3
+ADD	1	1
+SUB	2	1
+MUL	2	3
+HIST	2	asc
+HIST	2	asc
+HIST	desc	2
+HIST	3	desc
+HIST	2	asc
+HIST	2	asc
+HIST	3	asc
+HIST	3	asc
