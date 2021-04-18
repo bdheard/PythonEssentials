@@ -6,6 +6,9 @@ import bs4
 import requests
 from bs4 import BeautifulSoup 
 
+import aiohttp
+import asyncio
+
 class AdvancedCalculator(simple.SimpleCalculator):
     """
     A class to provide advanced calculator functionality.
@@ -15,7 +18,7 @@ class AdvancedCalculator(simple.SimpleCalculator):
     Methods
     -------
     add(arguments: arguments.Arguments):
-        Addtiion.
+        Addition.
     substract(arguments: arguments.Arguments):
         Substract.
     multiply(arguments: arguments.Arguments):
@@ -87,13 +90,17 @@ class AdvancedCalculator(simple.SimpleCalculator):
                 for line in (file.readlines() [-last_n_lines:]):
                     print(line, end ='')
 
-    def get_stock_price(self, arguments: arguments.Arguments):
+    async def get_html(self, session, url):
+        async with session.get(url, ssl = False) as response:
+            return await response.text()
+
+    async def get_stock_price(self, arguments: arguments.Arguments):
         stock_symbol = arguments.first_param
-        
-        url = requests.get(f'https://finance.yahoo.com/quote/{stock_symbol}?p={stock_symbol}')
-        soup = bs4.BeautifulSoup(url.text, features="html.parser")
-        price = soup.find('div',{'class': 'My(6px) Pos(r) smartphone_Mt(6px)'}).find('span').text
-        return price 
+        async with aiohttp.ClientSession() as session:
+            html = await self.get_html(session, f'https://finance.yahoo.com/quote/{stock_symbol}?p={stock_symbol}')
+            soup = bs4.BeautifulSoup(html, features="html.parser")
+            price = soup.find('div',{'class': 'My(6px) Pos(r) smartphone_Mt(6px)'}).find('span').text
+            return price 
 
     def execute(self, operation: str, input_arguments: arguments.Arguments):
         
@@ -124,7 +131,9 @@ class AdvancedCalculator(simple.SimpleCalculator):
         elif operations.Operations[operation]  == operations.Operations.HIST:
             print(self.read_log_entry(input_arguments))
         elif operations.Operations[operation]  == operations.Operations.STOCK:
-            print(self.get_stock_price(input_arguments))
+            loop = asyncio.get_event_loop()
+            price = loop.run_until_complete(self.get_stock_price(input_arguments)) 
+            print(price)
         elif operations.Operations[operation]  == operations.Operations.QUIT:
             return
         else:
