@@ -94,7 +94,7 @@
 <section id="overview" class="slide level2">
 <h2>Overview</h2>
 <ol type="1">
-<li>Conditional Statments</li>
+<li>Conditional Statements</li>
 <li>Error Handling</li>
 <li>Functions</li>
 <li>Lambda functions</li>
@@ -220,10 +220,9 @@
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="cf">finally</span>:</span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;This always runs on success or failure&#39;</span>)</span></code></pre></div>
 <aside class="notes">
-<p>Notes:</p>
+<p>Notes: - built-in Exceptions: https://docs.python.org/3/library/exceptions.html - handle from more specific to more generic</p>
 <ul>
-<li><p>handle from more specific to more generic</p></li>
-<li><p>When to use:</p>
+<li>When to use:
 <ul>
 <li>User input</li>
 <li>Accessing an external system</li>
@@ -236,9 +235,9 @@
 <section id="functions" class="slide level2">
 <h2>Functions</h2>
 <ul>
-<li>Recover from error state</li>
-<li>Logging</li>
-<li>Graceful exit</li>
+<li>Encapsulate Logic.</li>
+<li>Can receive none, one or more input parameters.</li>
+<li>Can return values.</li>
 </ul>
 <div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_initial(name):</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    initial <span class="op">=</span> name[<span class="dv">0</span>:<span class="dv">1</span>].upper()</span>
@@ -248,8 +247,8 @@
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>first_name_initial <span class="op">=</span> get_initial(first_name)</span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>last_name <span class="op">=</span> <span class="bu">input</span>(<span class="st">&#39;Enter your last name: &#39;</span>)</span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>last_name_initial <span class="op">=</span> get_initial(last_name)</span></code></pre></div>
-<pre><code>Enter your first name: susan
-Enter your last name: ibach
+<pre><code>Enter your first name: John
+Enter your last name: Doe
 Your initials are: SI</code></pre>
 <aside class="notes">
 
@@ -260,7 +259,7 @@ Your initials are: SI</code></pre>
 <ul>
 <li>Inline function</li>
 <li>Anonymous, may not have a name</li>
-<li>Frequently used with higher-order functions which take functions as argumetns</li>
+<li>Frequently used with higher-order functions which take functions as arguments</li>
 </ul>
 <figure>
 <img data-src="../media/lambda.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
