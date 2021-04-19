@@ -1,6 +1,6 @@
-Set-Location -Path "Slides"
+Set-Location -Path "c:\src\git\PythonEssentials\Slides"
 
-pandoc -s Module00.md Module01.md Module02.md Module03.md Module04.md Module05.md Module06.md Module07.md Module08.md Module09.md Module10.md Module11.md Module12.md -o ..\output\PythonEssentials.pdf 
+#pandoc -s Module00.md Module01.md Module02.md Module03.md Module04.md Module05.md Module06.md Module07.md Module08.md Module09.md Module10.md Module11.md Module12.md -o ..\output\PythonEssentials.pdf 
 
 pandoc -t revealjs -s Module00.md -o ..\output\Module00.html
 pandoc -t revealjs -s Module01.md -o ..\output\Module01.html
@@ -15,6 +15,7 @@ pandoc -t revealjs -s Module09.md -o ..\output\Module09.html
 pandoc -t revealjs -s Module10.md -o ..\output\Module10.html
 pandoc -t revealjs -s Module11.md -o ..\output\Module11.html
 pandoc -t revealjs -s Module12.md -o ..\output\Module12.html
+
 
 # Rename-Item -Path "labs\Lab1.md" -NewName "Lab01.md" -Force
 # Rename-Item -Path "labs\Lab2.md" -NewName "Lab02.md" -Force

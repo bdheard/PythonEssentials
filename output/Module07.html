@@ -95,7 +95,7 @@
 <h2>Overview</h2>
 <ol type="1">
 <li>Using modules</li>
-<li>Pakcages</li>
+<li>Packages</li>
 <li>Creating modules</li>
 <li>Python virtual environment</li>
 </ol>
@@ -103,9 +103,11 @@
 <section id="modules-overview" class="slide level2">
 <h2>Modules Overview</h2>
 <ul>
-<li>A Python file with functions, classes and other components</li>
-<li>Break code down into reusable structures</li>
-<li>They’re referenced by using the import statement.</li>
+<li>A Python file with functions, classes and other components.</li>
+<li>Break code down into reusable structures.</li>
+<li>Referenced by using the import statement.</li>
+<li>It is customary but not required to place all import statements at the beginning of a module.</li>
+<li>To speed up loading modules, Python caches the compiled version of each module in the <strong><strong>pycache</strong></strong> directory under the name module.version.pyc</li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import module as namespace</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> helpers</span>
@@ -126,7 +128,8 @@
 <h2>Packages</h2>
 <ul>
 <li>Modules can be distributed using a Package.</li>
-<li>Pakcages are published collection of modules.</li>
+<li>A Package is a published collection of modules.</li>
+<li>Defines a namespace like PythonEssentials.Calculator</li>
 <li>You can publish to, and install from pypi.org.</li>
 <li>Install package with pip.</li>
 </ul>
@@ -143,17 +146,42 @@
 
 </aside>
 </section>
+<section id="creating-packages" class="slide level2">
+<h2>Creating Packages</h2>
+<ul>
+<li>The <code>__init__.py</code> files tell Python to treat directories containing the file as packages.</li>
+<li>The <code>__init__.py</code> can be an empty file, but it can also execute initialization code for the package.</li>
+</ul>
+<pre><code>PythonEssentials/
+                __init__.py
+                calculators/
+                            __init__.py
+                            simple_calculator.py
+                            advanced_calculator.py
+                parsers/
+                            __init__.py
+                            console_input_parser.py
+                            console_output_parser.py
+                            file_input_parser.py
+                            file_output_parser.py</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> python_essentials.calculators.simple_calculator</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> python_essentials.parsers <span class="im">import</span> console_input_parser, console_output_parser</span></code></pre></div>
+<p><img data-src="../media/pypi.png" /></p>
+<aside class="notes">
+
+</aside>
+</section>
 <section id="python-virtual-environment" class="slide level2">
 <h2>Python Virtual Environment</h2>
 <ul>
-<li><p>Isolated environement where to install your dependencies.</p></li>
-<li><p>Create virtual environement.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> -m venv .venv</span></code></pre></div></li>
-<li><p>Activate virtual environement in VS Code.</p>
+<li><p>Isolated environment where to install your dependencies.</p></li>
+<li><p>Create virtual environnement.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> -m venv .venv</span></code></pre></div></li>
+<li><p>Activate virtual environment in VS Code.</p>
 <figure>
 <img data-src="../media/ActivatePythonVirtualEnvironment.PNG" alt="image" /><figcaption aria-hidden="true">image</figcaption>
 </figure></li>
-<li><p>Activate virtual environement in command line <code>bash     .\.venv\Scripts\activate</code></p></li>
+<li><p>Activate virtual environment in command line <code>bash     .\.venv\Scripts\activate</code></p></li>
 <li><p>Create Requirements file <code>bash     python -m pip freeze &gt; requirements.txt</code></p></li>
 </ul>
 <aside class="notes">

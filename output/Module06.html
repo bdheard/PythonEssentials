@@ -291,6 +291,26 @@
 </ul>
 </aside>
 </section>
+<section id="enumerators" class="slide level2">
+<h2>Enumerators</h2>
+<ul>
+<li>Set of names bound to unique, constant values.</li>
+<li><strong>name</strong> keyword displays the name of the enum.</li>
+<li>Use <strong>type()</strong> to check the enum types</li>
+<li>import <strong>enum</strong></li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> enum</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Colour(enum.Enum):</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    RED <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    GREEN <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    BLUE <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c <span class="kw">is</span> Colour.RED)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">True</span></span></code></pre></div>
+<aside class="notes">
+<p>Notes:</p>
+</aside>
+</section>
     </div>
   </div>
 

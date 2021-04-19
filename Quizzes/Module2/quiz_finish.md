@@ -12,21 +12,6 @@ print(sum(xs))
 1. [x] 13
 1. [ ] Something else.
 
-
-#### Python Lists and Default Arguments
-
-```python
-def take_default_list(xs = []):
-    xs.append(7)
-    return sum(xs)
-```
-
-#### What is the output of ``take_default_list([1,2,3])``?
-
-1. [ ] It's impossible to know.
-1. [ ] 13
-1. [ ] Something else.
-
 #### In the Python statement x = a + 5 - b:
 
 - a and b are ________
@@ -58,14 +43,12 @@ Internal representation of float objects is not precise, so they can’t be reli
 ```
 You should instead compute whether the numbers are close enough to one another to satisfy a specified tolerance.
 
-#### Consider the following code snippet:
+#### what is the value of y after these lines of code are executed?
 
 ```python
 x = 10.0
 y = (x < 100.0) and isinstance(x, float)
 ```
-
-After these are executed, what is the value of y?
 
 1. [ ] None
 1. [X] True
