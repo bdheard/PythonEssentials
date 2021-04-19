@@ -38,13 +38,13 @@ print('Blank line \nin the middle of string')
 
 ## Data Types
 
-**Text:** str
-**Numeric:** int, float, complex
-**Sequence:** list, tuple, range
-**Mapping:** dict
-**Set:** set, frozenset
-**Boolean:** bool
-**Binary:** bytes, bytearray, memoryview
+- **Text:** str
+- **Numeric:** int, float, complex
+- **Sequence:** list, tuple, range
+- **Mapping:** dict
+- **Set:** set, frozenset
+- **Boolean:** bool
+- **Binary:** bytes, bytearray, memoryview
 
 
 ::: notes
@@ -95,6 +95,17 @@ second_num = input('Enter second number ')
 print(int(first_num) + int(second_num)) # Output: 11
 ```
 
+::: notes
+Notes:
+
+- When displaying a string that contains numbers you must convert the numbers into strings.
+- Numbers can be stored as strings
+- Numbers stored as strings are treated as strings.
+- The input function always returns strings.
+:::
+
+## Working with numbers
+
 | Symbol  | Operation      |
 |---------|----------------|
 | +       | Addition       |
@@ -104,10 +115,5 @@ print(int(first_num) + int(second_num)) # Output: 11
 | **      | Exponent       |
 
 ::: notes
-Notes:
 
-- When displaying a string that contains numbers you must convert the numbers into strings.
-- Numbers can be stored as strings
-- Numbers stored as strings are treated as strings.
-- The input function always returns strings.
 :::

@@ -13,7 +13,6 @@ subtitle: Python Essentials
 ## Conditional Statements
 
 ```python
-country = 'CANADA'
 if country == 'canada':
     print('Oh look a Canadian')
 elif country == 'england':
@@ -34,7 +33,7 @@ else:
 
 
 ::: notes
-
+country == 'canada'
 How you indent your code changes execution
 
 String comparisons are case sensitive
@@ -49,7 +48,9 @@ Use string functions to make case insensitive comparisons
 if gpa >= .85:
 	if lowest_grade >= .70:
 		print('Well done')
+```
 
+```python
 if gpa >= .85 and lowest_grade >= .70:
 	print('Well done')
 ```
@@ -71,9 +72,9 @@ Lowest grade is at least 70%
 
 ## Handling runtime error
 
-* Recover from error state
-* Logging
-* Graceful exit
+- Recover from error state
+- Logging
+- Graceful exit
 
 ```python
 try:
@@ -103,9 +104,9 @@ Notes:
 
 ## Functions
 
-* Encapsulate Logic.
-* Can receive none, one or more input parameters.
-* Can return values.
+- Encapsulate Logic.
+- Can receive none, one or more input parameters.
+- Can return values.
 
 ```python
 def get_initial(name):
@@ -130,9 +131,9 @@ Your initials are: SI
 
 ## Lambda Functions
 
-* Inline function
-* Anonymous, may not have a name
-* Frequently used with higher-order functions which take functions as arguments
+- Inline function
+- Anonymous, may not have a name
+- Frequently used with higher-order functions which take functions as arguments
 
 ![image](../media/lambda.png)
 

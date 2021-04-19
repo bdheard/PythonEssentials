@@ -16,7 +16,8 @@ subtitle: Python Essentials
 - Lists are collections of items.
 - Lists can be expanded or contracted as needed.
 - Can contain any data type.
-- Commonly used to store a single column collection of information, however it is possible to nest lists.
+- Used to store a single column collection of information
+- It is possible to nest lists.
 
 ```python
 empty_list = []
@@ -38,9 +39,9 @@ print(scores[1]) # 99
 
 ## Arrays
 
-* Arrays are collections of items.
-* Designed to store a uniform basic data type, such as integers or floating point numbers.
-* Use array module
+- Arrays are collections of items.
+- Designed to store a uniform basic data type, such as integers or floating point numbers.
+- Use array module
 
 ```python
 from array import array
@@ -63,12 +64,12 @@ Notes:
 
 ## Lists Vs. Arrays
 
-* Arrays:
-  * Simple types such as numbers
-  * Must all be the same type
-* Lists:
-  * Store anything
-  * Store any type
+- Arrays:
+  - Simple types such as numbers
+  - Must all be the same type
+- Lists:
+  - Store anything
+  - Store any type
 
 ::: notes
 
@@ -124,6 +125,11 @@ names[:3]
 - **sort()** can only be used with lists
 - **sort()** returns None and modifies the values in place
 
+::: notes
+:::
+
+## Sorting complex objects
+
 ```json
 persons = [
   {'name': 'James', 'age': 50},
@@ -134,7 +140,6 @@ Error: TypeError: '<' not supported between instances of 'dict' and 'dict'
 
 ```python
 persons.sort()
-
 print(persons)
 ```
 
@@ -176,12 +181,12 @@ John
 
 ## Dictionaries Vs Lists 
 
-* Dictionaries:
-  * Key/Value pairs
-  * Storage order not guaranteed
-* Lists:
-  * Zero-based index
-  * Storage order guaranteed
+- Dictionaries:
+  - Key/Value pairs
+  - Storage order not guaranteed
+- Lists:
+  - Zero-based index
+  - Storage order guaranteed
 
 ::: notes
 
@@ -190,7 +195,7 @@ John
 ## Tuples
 
 - Create a tuple
-  ```pyhon
+  ```python
   empty_tuple = ()
   empty_tuple = tuple()
   
@@ -213,21 +218,16 @@ https://docs.python.org/2/library/functions.html#tuple
 
 - Sets are unordered.
 - Set elements are unique. Duplicate elements are not allowed.
-- A set itself may be modified, but the elements contained in the set must be of an immutable type.
-- Common operations
-  - union
-  - intersect
-  - difference
+- Common operations: union, intersect, and difference.
 
-```pyhon
+![image](../media/sets.png)
+
+```python
 empty_set = set()
 
 set1 = {1, 5, 10, 15, 20}
 set2 = {2, 5, 11, 15, 21}
 ```
-
-![image](../media/sets.png)
-
 
 ::: notes
 
