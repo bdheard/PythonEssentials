@@ -31,7 +31,8 @@ subtitle: Python Essentials
 - Python is pre-installed on most Unix systems, Linux and MAC OS X
 - The pre-installed version may not be the most recent one
 - Download from http://python.org/download/
-- Python comes with a large library of standard modules
+- Python comes with a large library of standard modules.
+- Remember to add Python to the path variable!
 
 ![](../media/PythonOrg.png)
 

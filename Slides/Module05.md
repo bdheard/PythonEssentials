@@ -39,7 +39,6 @@ while index < len(names):
 	print(names[index])
 	# Change the condition!!
 	index = index + 1
-
 ```
 
 ::: notes
@@ -53,6 +52,22 @@ while index < len(names):
 ![](..\media\break_continue.png)
 
 ::: notes
+:::
+
+## The else statement
+
+```python
+while i < 6:
+  print(i)
+  if i == 0:
+    break
+  i += 1
+else:
+  print("i is no longer less than 6")
+```
+
+:::notes
+The else clause will be executed only if the loop terminates “by exhaustion”—that is, if the loop iterates until the controlling condition becomes false. If the loop is exited by a break statement, the else clause won’t be executed.
 :::
 
 ## Filtering

@@ -17,7 +17,31 @@ subtitle: Python Essentials
 - Lists can be expanded or contracted as needed.
 - Can contain any data type.
 - Used to store a single column collection of information
+
+![](../media/list.png)
+
+::: notes
+
+:::
+
+## Nested Lists
+
 - It is possible to nest lists.
+
+```python 
+x[1] # second element of first list
+x[1][1] # second element of second list
+x[1][1][1] # 80
+```
+
+![](../media/nested_list.png)
+
+::: notes
+
+:::
+
+
+## Working with lists
 
 ```python
 empty_list = []
@@ -101,7 +125,36 @@ sorts side effect is that it will modify the list
 
 ## Slicing
 
-```bash
+```python
+a[start:stop]  # items start through stop-1
+a[start:]      # items start through the rest of the array
+a[:stop]       # items from the beginning through stop-1
+a[:]           # a copy of the whole array
+a[start:stop:step] # start through not past stop, by step
+
+a[-1]    # last item in the array
+a[-2:]   # last two items in the array
+a[:-2]   # everything except the last two items
+
+a[::-1]    # all items in the array, reversed
+a[1::-1]   # the first two items, reversed
+a[:-3:-1]  # the last two items, reversed
+a[-3::-1]  # everything except the last two items, reversed
+```
+
+:::notes
+If you ask for a[:-2] and a only contains one element, you get an empty list instead of an error.
+
+a[start:stop:step]
+
+is equivalent to:
+
+a[slice(start, stop, step)]
+:::
+
+## Slicing
+
+```python
 names = ['James', 'David', 'Bill','Justin']
 names
 names[3]
