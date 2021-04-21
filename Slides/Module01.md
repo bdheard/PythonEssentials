@@ -1,7 +1,9 @@
 ---
-title: Lesson 1
-subtitle: Python Essentials
+title: Python Essentials
 ---
+
+
+# Module 1
 
 ## Overview
 

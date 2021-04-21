@@ -1,7 +1,8 @@
 ---
-title: Lesson 0
-subtitle: Python Essentials
+title: Python Essentials
 ---
+
+# Module 1
 
 ## Syllabus
 
@@ -17,3 +18,7 @@ subtitle: Python Essentials
 1. Working with Files
 1. Regular Expressions
 1. Using the Standard Library
+
+::: notes
+
+:::

@@ -4,6 +4,7 @@
 
 # create one class
 class myClass():
+    
     # self is like this keyword in JS or c#
     def method1(self):
         print("myClass method1")

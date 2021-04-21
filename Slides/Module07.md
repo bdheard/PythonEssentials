@@ -1,7 +1,8 @@
 ---
-title: Lesson 7
-subtitle: Python Essentials
+title: Python Essentials
 ---
+
+# Module 7
 
 ## Overview
 
@@ -10,14 +11,22 @@ subtitle: Python Essentials
 1. Creating modules
 1. Python virtual environment
 
+::: notes
+:::
+
 ## Modules Overview
 
-- A Python file with functions, classes and other components.
+- A Python file with functions, classes, etc.
 - Break code down into reusable structures.
 - Referenced by using the import statement.
-- It is customary but not required to place all import statements at the beginning of a module.
 - To speed up loading modules, Python caches the compiled version of each module in the **__pycache__** directory under the name module.version.pyc
 
+::: notes
+:::
+
+## Modules 
+
+- Consider placing all import statements at the start of a module.
 
 ```python
 # import module as namespace
@@ -36,7 +45,7 @@ display('Not a warning')
 ::: notes
 :::
 
-## Packages
+## Packages Overview
 
 - Modules can be distributed using a Package.
 - A Package is a published collection of modules.
@@ -44,6 +53,10 @@ display('Not a warning')
 - You can publish to, and install from pypi.org.
 - Install package with pip.
 
+::: notes
+:::
+
+## Packages Overview
 
 ```python
 # Install an individual package
@@ -51,20 +64,30 @@ pip install colorama
 
 # Install from a list of packages
 pip install -r requirements.txt
-
-# requirements.txt
-colorama
 ```
 
 ![](../media/pypi.png)
 
 ::: notes
+https://pypi.org/
+
+if you don't specify version, it will install the latest.
+
+By default, python install all packages globally
+:::
+
+## Finding Packages
+
+![](../media/pypi.png)
+
+::: notes
+
 :::
 
 ## Creating Packages
 
-- The ```__init__.py``` files tell Python to treat directories containing the file as packages.
-- The ```__init__.py``` can be an empty file, but it can also execute initialization code for the package.
+- ```__init__.py``` treats directories as packages.
+- Can be an empty file or include initialization code.
 
 ```
 PythonEssentials/
@@ -80,44 +103,36 @@ PythonEssentials/
                             file_input_parser.py
                             file_output_parser.py
 ```
-```python
-import python_essentials.calculators.simple_calculator
-from python_essentials.parsers import console_input_parser, console_output_parser
-```
-
-![](../media/pypi.png)
 
 ::: notes
 :::
 
 ## Python Virtual Environment
 
-- Isolated environment where to install your dependencies.
-- Create virtual environnement.
+Isolated environment to install your dependencies.
 
-    ```bash
-    python -m venv .venv
-    ```
+1. Install virtual environment
+1. Create virtual environnement.
+1. Activate virtual environment in terminal
+1. Activate virtual environment in VS Code.
+1. Create Requirements file
 
-- Activate virtual environment in VS Code.
-
-    ![image](../media/ActivatePythonVirtualEnvironment.PNG)
-
-- Activate virtual environment in command line
-    ```bash
-    .\.venv\Scripts\activate
-    ```
-
-- Create Requirements file
-    ```bash
-    python -m pip freeze > requirements.txt
-    ```
+```bash
+pip install virtualenv
+python -m venv .venv
+.\.venv\Scripts\activate.ps1
+pip install colorama
+python -m pip freeze > requirements.txt
+```
+![](../media/ActivatePythonVirtualEnvironment.PNG)
 
 ::: notes
 
 - https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
 - https://code.visualstudio.com/docs/python/debugging
 - https://code.visualstudio.com/docs/python/environments
+
+-m: grab a specific module
 
 :::
 
