@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>Lesson 8</title>
+  <title>Python Essentials</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -87,19 +87,26 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">Lesson 8</h1>
-  <p class="subtitle">Python Essentials</p>
+  <h1 class="title">Python Essentials</h1>
 </section>
 
+<section>
+<section id="module-8" class="title-slide slide level1">
+<h1>Module 8</h1>
+
+</section>
 <section id="overview" class="slide level2">
 <h2>Overview</h2>
 <ol type="1">
 <li>Clean code</li>
 <li>Linting</li>
 </ol>
+<aside class="notes">
+
+</aside>
 </section>
-<section id="this-is-valid-but-it-is-clean" class="slide level2">
-<h2>This is valid, but it is clean?</h2>
+<section id="this-is-valid-but-is-it-clean" class="slide level2">
+<h2>This is valid, but is it clean?</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">12</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x<span class="op">==</span> <span class="dv">24</span>:</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a> <span class="bu">print</span>(<span class="st">&#39;Is valid&#39;</span>)</span>
@@ -131,7 +138,7 @@
 <ul>
 <li>Spaces, not tabs</li>
 <li>VSCode automatically converts tabs to spaces</li>
-<li>Avoid extraneous whitespaces</li>
+<li>Avoid extraneous whitespace</li>
 </ul>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">&#39;good&#39;</span>: <span class="dv">200</span>}</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>{ <span class="st">&#39;bad&#39;</span> : <span class="dv">100</span>}</span></code></pre></div>
@@ -142,12 +149,19 @@
 <section id="naming" class="slide level2">
 <h2>Naming</h2>
 <ul>
-<li>Spaces, not tabs</li>
-<li>VSCode automatically converts tabs to spaces</li>
-<li>Avoid extraneous whitespaces</li>
+<li><strong>Bad:</strong>
+<ul>
+<li>d</li>
+<li>DaysSinceCreation</li>
+<li>daysSinceCreation</li>
+<li>c = dta_rcrd_102()</li>
+</ul></li>
+<li><strong>Good:</strong>
+<ul>
+<li>days_since_creation</li>
+<li>customer_address = Address()</li>
+</ul></li>
 </ul>
-<p><strong>Bad:</strong> - d - DaysSinceCreation - daysSinceCreation - c = dta_rcrd_102()</p>
-<p><strong>Good:</strong> - days_since_creation - customer_address = Address()</p>
 <aside class="notes">
 <p>Notes: https://www.python.org/dev/peps/pep-0008/</p>
 </aside>
@@ -186,6 +200,12 @@
 <li>Must have them, but minimize them</li>
 <li>Express yourself in code</li>
 </ul>
+<aside class="notes">
+
+</aside>
+</section>
+<section id="comments-example" class="slide level2">
+<h2>Comments Example</h2>
 <p><strong>Bad:</strong></p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check to see if the employee is eligible for full benefits</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> ((employee.flags <span class="op">&amp;</span> HOURLY_FLAG) <span class="op">&amp;&amp;</span> (employee.age <span class="op">&gt;</span> <span class="dv">65</span>))</span></code></pre></div>
@@ -198,7 +218,7 @@
 <section id="documentation" class="slide level2">
 <h2>Documentation</h2>
 <ul>
-<li>String literal in the first statement in a module, function, class, or method definition.</li>
+<li>String literal at start of module, function, class, or method.</li>
 <li>Used for documentation.</li>
 </ul>
 <div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_hello(user_name: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
@@ -211,6 +231,9 @@
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co">        str: The greeting</span></span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&#39;Hello, &#39;</span> <span class="op">+</span> name</span></code></pre></div>
+<aside class="notes">
+<p>Use 3 quotes to create a docstring when it is placed at the top of the function, class, or module.</p>
+</aside>
 </section>
 <section id="classes" class="slide level2">
 <h2>Classes</h2>
@@ -222,17 +245,23 @@
 <figure>
 <img data-src="../media/single_responsibility_principle.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
 </figure>
+<aside class="notes">
+
+</aside>
 </section>
 <section id="linting" class="slide level2">
 <h2>Linting</h2>
 <ul>
-<li>Identify formatting issues</li>
-<li>Pylint for Python</li>
+<li><p>Identify formatting issues</p></li>
+<li><p>Pylint for Python</p></li>
+<li><p>Windows:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pylint</span></code></pre></div></li>
+<li><p>macOS or Linux:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip3</span> install pylint</span></code></pre></div></li>
 </ul>
-<p>Windows:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pylint</span></code></pre></div>
-<p>macOS or Linux:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip3</span> install pylint</span></code></pre></div>
+<aside class="notes">
+
+</aside>
 </section>
 <section id="type-hints" class="slide level2">
 <h2>Type hints</h2>
@@ -257,7 +286,7 @@
 <aside class="notes">
 <p>Notes: - parameter type - return type</p>
 </aside>
-</section>
+</section></section>
     </div>
   </div>
 

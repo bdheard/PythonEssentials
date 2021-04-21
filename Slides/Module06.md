@@ -1,7 +1,9 @@
 ---
-title: Lesson 6
-subtitle: Python Essentials
+title: Python Essentials
 ---
+
+
+# Module 6
 
 ## Overview
 

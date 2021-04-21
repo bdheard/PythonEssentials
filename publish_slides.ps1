@@ -1,6 +1,6 @@
 Set-Location -Path "Slides"
 
-#pandoc -s Module00.md Module01.md Module02.md Module03.md Module04.md Module05.md Module06.md Module07.md Module08.md Module09.md Module10.md Module11.md Module12.md -o ..\output\PythonEssentials.pdf 
+pandoc -s Module00.md Module01.md Module02.md Module03.md Module04.md Module05.md Module06.md Module07.md Module08.md Module09.md Module10.md Module11.md Module12.md -o ..\output\PythonEssentials.html 
 
 pandoc -t revealjs -s Module00.md -o ..\output\Module00.html
 pandoc -t revealjs -s Module01.md -o ..\output\Module01.html

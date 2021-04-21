@@ -1,13 +1,17 @@
 ---
-title: Lesson 12
-subtitle: Python Essentials
+title: Python Essentials
 ---
+
+# Module 12
 
 ## Overview
 
 1. Working with JSON
-1. Working with XMLA
+1. Working with XML
 1. Working with HTML
+
+:::notes
+:::
 
 ## Working with JSON
 
@@ -15,7 +19,12 @@ subtitle: Python Essentials
 - JSON is built on two structures:
   - Collections of key/value pairs.
   - lists of values.
-- Python json module helps you encode and decode JSON/
+- Python json module helps you encode and decode JSON
+
+::: notes
+:::
+
+## Working with JSON
 
 **Key value:** "key":"value"
 
@@ -45,11 +54,12 @@ JSON Linters will format JSON so it easier to read by a human. The following web
 - JSONLint
 - ConvertJson.com
 - JSON schema linter
+
 :::
 
-## Retriving JSON data
+## Retrieving JSON data
 
-- **Key value:** 
+**Key value:** 
 
 ```json
 "userName": "John Doe" 
@@ -59,7 +69,7 @@ JSON Linters will format JSON so it easier to read by a human. The following web
 print(results['userName'])
 ```
 
-- **Sub keys:** 
+**Sub keys:** 
 
 ```json
 "userName":
@@ -72,7 +82,7 @@ print(results['userName'])
 print(results['userName']['lastName'])
 ```
 
-- **List:** 
+**List:** 
 
 ```json
 {"tags": ["bear", "polar", "animal", "mammal"] 
@@ -89,4 +99,5 @@ Output:
 - John Doe
 - Doe
 - bear
+
 :::

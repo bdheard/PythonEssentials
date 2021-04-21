@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>Lesson 12</title>
+  <title>Python Essentials</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -87,17 +87,24 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">Lesson 12</h1>
-  <p class="subtitle">Python Essentials</p>
+  <h1 class="title">Python Essentials</h1>
 </section>
 
+<section>
+<section id="module-12" class="title-slide slide level1">
+<h1>Module 12</h1>
+
+</section>
 <section id="overview" class="slide level2">
 <h2>Overview</h2>
 <ol type="1">
 <li>Working with JSON</li>
-<li>Working with XMLA</li>
+<li>Working with XML</li>
 <li>Working with HTML</li>
 </ol>
+<aside class="notes">
+
+</aside>
 </section>
 <section id="working-with-json" class="slide level2">
 <h2>Working with JSON</h2>
@@ -108,8 +115,14 @@
 <li>Collections of key/value pairs.</li>
 <li>lists of values.</li>
 </ul></li>
-<li>Python json module helps you encode and decode JSON/</li>
+<li>Python json module helps you encode and decode JSON</li>
 </ul>
+<aside class="notes">
+
+</aside>
+</section>
+<section id="working-with-json-1" class="slide level2">
+<h2>Working with JSON</h2>
 <p><strong>Key value:</strong> “key”:“value”</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="er">&quot;userName&quot;:</span> <span class="er">&quot;John</span> <span class="er">Doe&quot;,</span> </span></code></pre></div>
 <p><strong>Sub keys:</strong> {“key”:{“subkey0”:“subvalue0”,“subkey1”:“subvalue1”, …}</p>
@@ -124,31 +137,25 @@
 <p>JSON Linters will format JSON so it easier to read by a human. The following website have JSON linters: - JSONLint - ConvertJson.com - JSON schema linter</p>
 </aside>
 </section>
-<section id="retriving-json-data" class="slide level2">
-<h2>Retriving JSON data</h2>
-<ul>
-<li><strong>Key value:</strong></li>
-</ul>
+<section id="retrieving-json-data" class="slide level2">
+<h2>Retrieving JSON data</h2>
+<p><strong>Key value:</strong></p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="er">&quot;userName&quot;:</span> <span class="er">&quot;John</span> <span class="er">Doe&quot;</span> </span></code></pre></div>
 <div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(results[<span class="st">&#39;userName&#39;</span>])</span></code></pre></div>
-<ul>
-<li><strong>Sub keys:</strong></li>
-</ul>
+<p><strong>Sub keys:</strong></p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="er">&quot;userName&quot;:</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;firstName&quot;</span><span class="fu">:</span> <span class="st">&quot;John&quot;</span><span class="fu">,</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a> <span class="dt">&quot;lastName&quot;</span><span class="fu">:</span> <span class="st">&quot;Doe&quot;</span><span class="fu">,</span> </span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a> <span class="dt">&quot;prefex&quot;</span><span class="fu">:</span> <span class="st">&quot;MR&quot;</span><span class="fu">}</span><span class="er">,</span></span></code></pre></div>
 <div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(results[<span class="st">&#39;userName&#39;</span>][<span class="st">&#39;lastName&#39;</span>])</span></code></pre></div>
-<ul>
-<li><strong>List:</strong></li>
-</ul>
+<p><strong>List:</strong></p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;tags&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;bear&quot;</span><span class="ot">,</span> <span class="st">&quot;polar&quot;</span><span class="ot">,</span> <span class="st">&quot;animal&quot;</span><span class="ot">,</span> <span class="st">&quot;mammal&quot;</span><span class="ot">]</span> </span></code></pre></div>
 <div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(results[<span class="st">&#39;description&#39;</span>][<span class="st">&#39;tags&#39;</span>][<span class="dv">0</span>])</span></code></pre></div>
 <aside class="notes">
 <p>Notes:</p>
 <p>Output: - John Doe - Doe - bear</p>
 </aside>
-</section>
+</section></section>
     </div>
   </div>
 

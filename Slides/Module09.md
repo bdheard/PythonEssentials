@@ -1,17 +1,21 @@
 ---
-title: Lesson 9
-subtitle: Python Essentials
+title: Python Essentials
 ---
+
+
+# Module 9
 
 ## Overview
 
 1. Working with the OS
 1. Reading and writing files
 
+::: notes
+:::
+
 ## Working with paths
 
 ```python
-# Python 3.6 or higher
 # Grab the library
 from pathlib imporWt Path
 
@@ -39,20 +43,19 @@ False
 from pathlib import Path
 cwd = Path.cwd()
 
-# Get the parent directory
-parent = cwd.parent
+parent = cwd.parent # Get the parent directory
 
-# Is this a directory?
-print(parent.is_dir())
+print(parent.is_dir()) # Is this a directory?
 
-# Is this a file?
-print(parent.is_file())
+print(parent.is_file()) # Is this a file?
 
 # List child directories
 for child in parent.iterdir():
     if child.is_dir():
         print(child)
 ```
+
+:::notes
 
 ```bash
 True
@@ -64,7 +67,6 @@ C:\essentials-python\dir2
 C:\essentials-python\dir3
 ```
 
-:::notes
 :::
 
 ## Working with files
@@ -88,6 +90,8 @@ print(demo_file.parent.name)
 print(demo_file.stat().st_size)
 ```
 
+:::notes
+
 ```bash
 demo.txt
 .txt
@@ -95,7 +99,6 @@ file_system
 11
 ```
 
-:::notes
 :::
 
 ## Opening a file
@@ -105,14 +108,14 @@ stream = open(file_name, mode, buffer_size)
 ```
 
 **Modes:**
-**r:** Read (default)
-**w:** Truncate and write
-**a:** Append if file exists
-**x:** Write, fail if file exists
-**+:** Updating (read/write)
 
-**t:** Text (default)
-**b:** Binary
+- **r:** Read (default)
+- **w:** Truncate and write
+- **a:** Append if file exists
+- **x:** Write, fail if file exists
+- **+:** Updating (read/write)
+- **t:** Text (default)
+- **b:** Binary
 
 :::notes
 :::
@@ -143,7 +146,7 @@ orem ipsum dolor sit amet, consectetur adipiscing elit.
 stream = open('output.txt', 'wt') # write text
 
 stream.write('H') # write a single string
-stream.writelines(['ello',' ','world']) # write multiple strings
+stream.writelines(['ello',' ','world'])	# write multiple strings
 stream.write('\n') # write a new line
 names = ['James','David'] # create a list of strings
 stream.writelines(names) # write list of strings 
@@ -156,7 +159,7 @@ True
 
 # In the file
 Hello world
-SusanChristopher
+JamesDavid
 ```
 
 :::notes
@@ -199,7 +202,9 @@ with open('output.txt', 'wt') as stream:
 ```
 
 :::notes
+
 Notes:
 with statement makes the code cleaner and more readable.
+
 :::
 

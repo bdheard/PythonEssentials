@@ -1,12 +1,16 @@
 ---
-title: Lesson 10
-subtitle: Python Essentials
+title: Python Essentials
 ---
+
+# Module 10
 
 ## Overview
 
 1. Asynchronous Operations
 1. Calling Web APIs
+
+::: notes
+:::
 
 ## Async Overview
 
@@ -17,6 +21,9 @@ subtitle: Python Essentials
 	- Web calls
 	- Network IO
 	- Complex data processing
+
+::: notes
+:::
 
 ## Writing Async operations
 

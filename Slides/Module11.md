@@ -1,7 +1,8 @@
 ---
-title: Lesson 11
-subtitle: Python Essentials
+title: Python Essentials
 ---
+
+# Module 11
 
 ## Overview
 
@@ -9,6 +10,9 @@ subtitle: Python Essentials
 1. Dates
 1. Time Zones
 1. Calendar
+
+::: notes
+:::
 
 ## Regular Expressions (Regex)
 

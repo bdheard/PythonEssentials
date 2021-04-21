@@ -19,7 +19,7 @@ msg2 = 'abc'
 
 print(msg)
 
-def print_hello(name: str) -> str:
+def print_hello(name: str):
     """
     Greets the user by name
 	Parameters:
