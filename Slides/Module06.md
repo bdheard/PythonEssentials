@@ -52,8 +52,8 @@ class Presenter():
 ## Using Classes
 
 ```python
-presenter = Presenter('Chris')
-presenter.name = 'Christopher'
+presenter = Presenter('James')
+presenter.name = 'James'
 presenter.say_hello()
 print(presenter.name)
 ```
@@ -66,8 +66,8 @@ print(presenter.name)
 
 - **EVERYTHING is public**
 - Conventions for suggesting accessibility
-- _ means avoid unless you really know what you're doing
-- __ (double underscore) means **do not use**
+- _ protected
+- __ (double underscore) private
 
 
 ::: notes

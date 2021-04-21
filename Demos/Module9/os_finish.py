@@ -22,13 +22,7 @@ def main():
     print("File path: " + file_path)
     print("File path and name: " + str(path.split(file_path)))
 
-    # read modification date
-    file_time = time.ctime(path.getmtime("textfile.txt"))
-    print(file_time)
 
-    # Calculate how long ago the file was modified
-    time_diff = datetime.datetime.now() - datetime.datetime.fromtimestamp(path.getmtime("textfile.txt"))
-    print("It has been " + str(time_diff) + " since the file was modified.")
 
 
 if __name__ == "__main__":

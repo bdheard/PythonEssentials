@@ -16,7 +16,7 @@ subtitle: Python Essentials
 - Lists are collections of items.
 - Lists can be expanded or contracted as needed.
 - Can contain any data type.
-- Used to store a single column collection of information
+- Used to store a single value or a collection.
 
 ![](../media/list.png)
 
@@ -52,7 +52,7 @@ scores = []
 scores.append(98) # Add new item to the end
 scores.append(99)
 
-print(names) # ['Christopher', 'Susan']
+print(names) # ['James', 'David']
 print(scores) # [98,99]
 print(scores[1]) # 99
 ```
@@ -129,6 +129,28 @@ sorts side effect is that it will modify the list
 a[start:stop]  # items start through stop-1
 a[start:]      # items start through the rest of the array
 a[:stop]       # items from the beginning through stop-1
+```
+
+```python
+names = ['10', '30', '20','50','80','60']
+
+names       # Output: ['10', '30', '20','50','80','60']
+names[3]    # Output: ['50']
+names[1:3]  # Output: ['30', '20']
+names[:3]   # Output: ['10', '30', '20']
+```
+
+![](../media/list.png)
+
+::: notes
+:::
+
+## More Slicing
+
+```python
+a[start:stop]  # items start through stop-1
+a[start:]      # items start through the rest of the array
+a[:stop]       # items from the beginning through stop-1
 a[:]           # a copy of the whole array
 a[start:stop:step] # start through not past stop, by step
 
@@ -142,6 +164,8 @@ a[:-3:-1]  # the last two items, reversed
 a[-3::-1]  # everything except the last two items, reversed
 ```
 
+![](../media/list.png)
+
 :::notes
 If you ask for a[:-2] and a only contains one element, you get an empty list instead of an error.
 
@@ -150,26 +174,6 @@ a[start:stop:step]
 is equivalent to:
 
 a[slice(start, stop, step)]
-:::
-
-## Slicing
-
-```python
-names = ['James', 'David', 'Bill','Justin']
-names
-names[3]
-names[1:3]
-names[:3]
-```
-
-```
-['James', 'David', 'Bill','Justin']
-['Justin']
-['David', 'Bill']
-['James', 'David', 'Bill']
-```
-
-::: notes
 :::
 
 ## Sorting

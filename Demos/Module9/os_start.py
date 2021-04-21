@@ -15,10 +15,6 @@ def main():
     # work with file paths
 
 
-    # read modification date
-
-
-    # Calculate how long ago the file was modified
 
 
 if __name__ == "__main__":

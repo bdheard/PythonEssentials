@@ -11,29 +11,34 @@ subtitle: Python Essentials
 1. Reduce
 1. List comprehensions
 
+::: notes
+:::
+
 ## For loops
 
-- For loops takes each item in an array or collection in order, and assigns it to the variable you define.
-- Loop through a collection
-    ```python
-    for name in ['David', 'James']:
-        print(name)
-    ```
-- Loop a number of times
-    ```python
-    for index in range(0, 2):
-        print(index)
-    ```
+For loops takes each item in an array or collection in order, and assigns it to the variable you define.
+
+```python
+# Loop through a collection
+for name in ['David', 'James']:
+  print(name)
+```
+
+```python
+#Loop a number of times
+for index in range(0, 2):
+  print(index)
+```
 
 ::: notes
 :::
 
 ## While loop
 
-- While loops perform an operation as long as a condition is true.
+While loops perform an operation as long as a condition is true.
 
 ```python
-names = ['Christopher', 'Susan']
+names = ['David', 'James']
 index = 0
 while index < len(names):
 	print(names[index])
@@ -46,12 +51,11 @@ while index < len(names):
 
 ## Terminate loop
 
-- **break** terminates loop and proceeds to the first statement following the loop.
-- **continue** terminates the current loop iteration and jumps to the top of the loop.
-
-![](..\media\break_continue.png)
+![image](../media/break_continue.png)
 
 ::: notes
+- **break** terminates loop and proceeds to the first statement following the loop.
+- **continue** terminates the current loop iteration and jumps to the top of the loop.
 :::
 
 ## The else statement
@@ -66,7 +70,7 @@ else:
   print("i is no longer less than 6")
 ```
 
-:::notes
+::: notes
 The else clause will be executed only if the loop terminates “by exhaustion”—that is, if the loop iterates until the controlling condition becomes false. If the loop is exited by a break statement, the else clause won’t be executed.
 :::
 
@@ -98,7 +102,7 @@ for s in filtered:
 ::: notes
 :::
 
-# Reduction
+## Reduction
 
 - **reduce()** applies a function to an iterable and reduce it to a single cumulative value.
 - Popular in functional programming.
@@ -140,14 +144,13 @@ print(newlist)
 
 ```python
 fruits = ["apple", "banana", "cherry"]
-newlist = []
 
 def copy_list(fruits):
   return fruits.upper()
 
-newlist = map(copy_list, fruits)
+new_list = map(copy_list, fruits)
 
-print(newlist)
+print(new_list)
 ```
 
 ```bash
@@ -165,26 +168,10 @@ print(newlist)
 
 ```python
 fruits = ["apple", "banana", "cherry"]
-newlist = []
 
-def copy_list(fruits):
-  return fruits.upper()
+new_list = map(lambda fruits: fruits.upper())
 
-newlist = map(copy_list, fruits)
-
-print(newlist)
-```
-
-```python
-fruits = ["apple", "banana", "cherry"]
-newlist = []
-
-def copy_list(fruits):
-  return fruits.upper()
-
-newlist = map(lamda fruits: , fruits)
-
-print(newlist)
+print(ne_w_list)
 ```
 
 ```bash

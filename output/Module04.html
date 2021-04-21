@@ -107,20 +107,39 @@
 <li>Lists are collections of items.</li>
 <li>Lists can be expanded or contracted as needed.</li>
 <li>Can contain any data type.</li>
-<li>Used to store a single column collection of information</li>
+<li>Used to store a single value or a collection.</li>
+</ul>
+<p><img data-src="../media/list.png" /></p>
+<aside class="notes">
+
+</aside>
+</section>
+<section id="nested-lists" class="slide level2">
+<h2>Nested Lists</h2>
+<ul>
 <li>It is possible to nest lists.</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>empty_list <span class="op">=</span> []</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>empty_list <span class="op">=</span> <span class="bu">list</span>()</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">&#39;James&#39;</span>, <span class="st">&#39;David&#39;</span>]</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>scores <span class="op">=</span> []</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>scores.append(<span class="dv">98</span>) <span class="co"># Add new item to the end</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>scores.append(<span class="dv">99</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(names) <span class="co"># [&#39;Christopher&#39;, &#39;Susan&#39;]</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(scores) <span class="co"># [98,99]</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(scores[<span class="dv">1</span>]) <span class="co"># 99</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">1</span>] <span class="co"># second element of first list</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">1</span>][<span class="dv">1</span>] <span class="co"># second element of second list</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">1</span>][<span class="dv">1</span>][<span class="dv">1</span>] <span class="co"># 80</span></span></code></pre></div>
+<p><img data-src="../media/nested_list.png" /></p>
+<aside class="notes">
+
+</aside>
+</section>
+<section id="working-with-lists" class="slide level2">
+<h2>Working with lists</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>empty_list <span class="op">=</span> []</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>empty_list <span class="op">=</span> <span class="bu">list</span>()</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">&#39;James&#39;</span>, <span class="st">&#39;David&#39;</span>]</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>scores <span class="op">=</span> []</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>scores.append(<span class="dv">98</span>) <span class="co"># Add new item to the end</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>scores.append(<span class="dv">99</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(names) <span class="co"># [&#39;James&#39;, &#39;David&#39;]</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(scores) <span class="co"># [98,99]</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(scores[<span class="dv">1</span>]) <span class="co"># 99</span></span></code></pre></div>
 <aside class="notes">
 
 </aside>
@@ -132,12 +151,12 @@
 <li>Designed to store a uniform basic data type, such as integers or floating point numbers.</li>
 <li>Use array module</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> array <span class="im">import</span> array</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>scores <span class="op">=</span> array(<span class="st">&#39;d&#39;</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>scores.append(<span class="dv">97</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>scores.append(<span class="dv">98</span>)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(scores)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(scores[<span class="dv">1</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> array <span class="im">import</span> array</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>scores <span class="op">=</span> array(<span class="st">&#39;d&#39;</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>scores.append(<span class="dv">97</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>scores.append(<span class="dv">98</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(scores)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(scores[<span class="dv">1</span>])</span></code></pre></div>
 <aside class="notes">
 <p>Notes: - from array library - Later module will talk about libraries and modules and packages. - Basically we are importing an array</p>
 </aside>
@@ -162,12 +181,12 @@
 </section>
 <section id="common-operations" class="slide level2">
 <h2>Common Operations</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">names</span> = [<span class="st">&#39;James&#39;</span>, <span class="st">&#39;David&#39;</span>]</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">print</span>(len(names)) # <span class="ex">Get</span> the number of items</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">names.insert</span>(0, <span class="st">&#39;Bill&#39;</span>) # <span class="ex">Insert</span> before index</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">print</span>(names)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">names.sort</span>()</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ex">print</span>(names)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">names</span> = [<span class="st">&#39;James&#39;</span>, <span class="st">&#39;David&#39;</span>]</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">print</span>(len(names)) # <span class="ex">Get</span> the number of items</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">names.insert</span>(0, <span class="st">&#39;Bill&#39;</span>) # <span class="ex">Insert</span> before index</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">print</span>(names)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">names.sort</span>()</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ex">print</span>(names)</span></code></pre></div>
 <pre><code>2
 [&#39;Bill&#39;, &#39;James&#39;, &#39;David&#39;]
 [&#39;Bill&#39;, &#39;David&#39;, &#39;James&#39;]</code></pre>
@@ -177,17 +196,42 @@
 </section>
 <section id="slicing" class="slide level2">
 <h2>Slicing</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">names</span> = [<span class="st">&#39;James&#39;</span>, <span class="st">&#39;David&#39;</span>, <span class="st">&#39;Bill&#39;</span>,<span class="st">&#39;Justin&#39;</span>]</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">names</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">names</span>[3]</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ex">names</span>[1:3]</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">names</span>[:3]</span></code></pre></div>
-<pre><code>[&#39;James&#39;, &#39;David&#39;, &#39;Bill&#39;,&#39;Justin&#39;]
-[&#39;Justin&#39;]
-[&#39;David&#39;, &#39;Bill&#39;]
-[&#39;James&#39;, &#39;David&#39;, &#39;Bill&#39;]</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>a[start:stop]  <span class="co"># items start through stop-1</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>a[start:]      <span class="co"># items start through the rest of the array</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>a[:stop]       <span class="co"># items from the beginning through stop-1</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">&#39;10&#39;</span>, <span class="st">&#39;30&#39;</span>, <span class="st">&#39;20&#39;</span>,<span class="st">&#39;50&#39;</span>,<span class="st">&#39;80&#39;</span>,<span class="st">&#39;60&#39;</span>]</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>names       <span class="co"># Output: [&#39;10&#39;, &#39;30&#39;, &#39;20&#39;,&#39;50&#39;,&#39;80&#39;,&#39;60&#39;]</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>names[<span class="dv">3</span>]    <span class="co"># Output: [&#39;50&#39;]</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>names[<span class="dv">1</span>:<span class="dv">3</span>]  <span class="co"># Output: [&#39;30&#39;, &#39;20&#39;]</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>names[:<span class="dv">3</span>]   <span class="co"># Output: [&#39;10&#39;, &#39;30&#39;, &#39;20&#39;]</span></span></code></pre></div>
+<p><img data-src="../media/list.png" /></p>
 <aside class="notes">
 
+</aside>
+</section>
+<section id="more-slicing" class="slide level2">
+<h2>More Slicing</h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>a[start:stop]  <span class="co"># items start through stop-1</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>a[start:]      <span class="co"># items start through the rest of the array</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>a[:stop]       <span class="co"># items from the beginning through stop-1</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>a[:]           <span class="co"># a copy of the whole array</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>a[start:stop:step] <span class="co"># start through not past stop, by step</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>a[<span class="op">-</span><span class="dv">1</span>]    <span class="co"># last item in the array</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>a[<span class="op">-</span><span class="dv">2</span>:]   <span class="co"># last two items in the array</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>a[:<span class="op">-</span><span class="dv">2</span>]   <span class="co"># everything except the last two items</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>a[::<span class="op">-</span><span class="dv">1</span>]    <span class="co"># all items in the array, reversed</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>a[<span class="dv">1</span>::<span class="op">-</span><span class="dv">1</span>]   <span class="co"># the first two items, reversed</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>a[:<span class="op">-</span><span class="dv">3</span>:<span class="op">-</span><span class="dv">1</span>]  <span class="co"># the last two items, reversed</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>a[<span class="op">-</span><span class="dv">3</span>::<span class="op">-</span><span class="dv">1</span>]  <span class="co"># everything except the last two items, reversed</span></span></code></pre></div>
+<p><img data-src="../media/list.png" /></p>
+<aside class="notes">
+<p>If you ask for a[:-2] and a only contains one element, you get an empty list instead of an error.</p>
+<p>a[start:stop:step]</p>
+<p>is equivalent to:</p>
+<p>a[slice(start, stop, step)]</p>
 </aside>
 </section>
 <section id="sorting" class="slide level2">
@@ -203,18 +247,18 @@
 </section>
 <section id="sorting-complex-objects" class="slide level2">
 <h2>Sorting complex objects</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="er">persons</span> <span class="er">=</span> <span class="ot">[</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span><span class="er">&#39;name&#39;</span><span class="fu">:</span> <span class="er">&#39;James&#39;</span><span class="fu">,</span> <span class="er">&#39;age&#39;</span><span class="fu">:</span> <span class="dv">50</span><span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span><span class="er">&#39;name&#39;</span><span class="fu">:</span> <span class="er">&#39;David&#39;</span><span class="fu">,</span> <span class="er">&#39;age&#39;</span><span class="fu">:</span> <span class="dv">47</span><span class="fu">}</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="er">persons</span> <span class="er">=</span> <span class="ot">[</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span><span class="er">&#39;name&#39;</span><span class="fu">:</span> <span class="er">&#39;James&#39;</span><span class="fu">,</span> <span class="er">&#39;age&#39;</span><span class="fu">:</span> <span class="dv">50</span><span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span><span class="er">&#39;name&#39;</span><span class="fu">:</span> <span class="er">&#39;David&#39;</span><span class="fu">,</span> <span class="er">&#39;age&#39;</span><span class="fu">:</span> <span class="dv">47</span><span class="fu">}</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span></span></code></pre></div>
 <p>Error: TypeError: ‘&lt;’ not supported between instances of ‘dict’ and ‘dict’</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>persons.sort()</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(persons)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>persons.sort()</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(persons)</span></code></pre></div>
 <p>Works!</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sorter(item):</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> item[<span class="st">&#39;name&#39;</span>]</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>presenters.sort(key<span class="op">=</span>sorter)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sorter(item):</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> item[<span class="st">&#39;name&#39;</span>]</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>presenters.sort(key<span class="op">=</span>sorter)</span></code></pre></div>
 <aside class="notes">
 
 </aside>
@@ -225,14 +269,14 @@
 <li>Dictionaries are key/value pairs of a collection of items.</li>
 <li>Dictionaries use keys to identify each item.</li>
 </ul>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>empty_dictionary <span class="op">=</span> {}</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>empty_dictionary <span class="op">=</span> <span class="bu">dict</span>()</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>person <span class="op">=</span> {<span class="st">&#39;first&#39;</span>: <span class="st">&#39;John&#39;</span>}</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>person[<span class="st">&#39;last&#39;</span>] <span class="op">=</span> <span class="st">&#39;Doe&#39;</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(person)</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(person[<span class="st">&#39;first&#39;</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>empty_dictionary <span class="op">=</span> {}</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>empty_dictionary <span class="op">=</span> <span class="bu">dict</span>()</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>person <span class="op">=</span> {<span class="st">&#39;first&#39;</span>: <span class="st">&#39;John&#39;</span>}</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>person[<span class="st">&#39;last&#39;</span>] <span class="op">=</span> <span class="st">&#39;Doe&#39;</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(person)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(person[<span class="st">&#39;first&#39;</span>])</span></code></pre></div>
 <pre><code>{&#39;first&#39;: &#39;John&#39;, &#39;last&#39;: &#39;Doe&#39;}
 John</code></pre>
 <aside class="notes">
@@ -261,12 +305,12 @@ John</code></pre>
 <h2>Tuples</h2>
 <ul>
 <li><p>Create a tuple</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>empty_tuple <span class="op">=</span> ()</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>empty_tuple <span class="op">=</span> <span class="bu">tuple</span>()</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>tup <span class="op">=</span> (<span class="st">&#39;32&#39;</span>, <span class="dv">4</span>, <span class="st">&#39;yes&#39;</span>, <span class="fl">3.14</span>)</span></code></pre></div></li>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>empty_tuple <span class="op">=</span> ()</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>empty_tuple <span class="op">=</span> <span class="bu">tuple</span>()</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>tup <span class="op">=</span> (<span class="st">&#39;32&#39;</span>, <span class="dv">4</span>, <span class="st">&#39;yes&#39;</span>, <span class="fl">3.14</span>)</span></code></pre></div></li>
 <li><p>Similar to lists:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>tup[<span class="dv">1</span>:<span class="dv">4</span>] <span class="co"># (4, &#39;yes&#39;, 3.14)</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>tup[<span class="dv">1</span>:<span class="dv">4</span>] <span class="co"># (4, &#39;yes&#39;, 3.14)</span></span></code></pre></div></li>
 <li><p>Tuples are immutable</p></li>
 </ul>
 <aside class="notes">
@@ -283,10 +327,10 @@ John</code></pre>
 <figure>
 <img data-src="../media/sets.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
 </figure>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>empty_set <span class="op">=</span> <span class="bu">set</span>()</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>set1 <span class="op">=</span> {<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">20</span>}</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>set2 <span class="op">=</span> {<span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">11</span>, <span class="dv">15</span>, <span class="dv">21</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>empty_set <span class="op">=</span> <span class="bu">set</span>()</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>set1 <span class="op">=</span> {<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">20</span>}</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>set2 <span class="op">=</span> {<span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">11</span>, <span class="dv">15</span>, <span class="dv">21</span>}</span></code></pre></div>
 <aside class="notes">
 
 </aside>

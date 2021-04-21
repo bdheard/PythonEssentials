@@ -5,7 +5,7 @@
 1. [ ] s[::-3]
 1. [ ] s[-1::-3]
 1. [ ] s[:0:-3]
-1. [ ] s[-1:0:-3]
+1. [X] s[-1:0:-3]
 
 **Explanation:**
 The third index in the slice expression is -3, which indicates every third character stepping backward.
