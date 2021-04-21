@@ -61,7 +61,6 @@ def sort_lists(list_one: list, list_two: list):
 def reduce_list(list_one: list, even_filter_flag: str):
     from functools import reduce
     list_one = map(int,list_one.split(","))
-    even_filter_flag = bool(even_filter_flag)
     return reduce(lambda x, y: x + y, list_one)
 
 def map_list(list_one: list, factor: str):

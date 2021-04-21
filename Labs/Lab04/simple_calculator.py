@@ -24,24 +24,21 @@ def divide(x, y):
         print("There was a problem with the division.")
 
 def union(list_one: set, list_two: set):
-    from ast import literal_eval
-    list_one = set(literal_eval(list_one))
-    list_two = set(literal_eval(list_two))
+    list_one = set(list_one.split(","))
+    list_two = set(list_two.split(","))
     return list_one.union(list_two)
 
-def difference(list_one: set, list_two: set):
-    from ast import literal_eval
-    list_one = set(literal_eval(list_one))
-    list_two = set(literal_eval(list_two))
+def difference(list_one, list_two):
+    list_one = set(list_one.split(","))
+    list_two = set(list_two.split(","))
     return list_one.difference(list_two)
 
-def intersection(list_one: set, list_two: set):
-    from ast import literal_eval
-    list_one = set(literal_eval(list_one))
-    list_two = set(literal_eval(list_two))
+def intersection(list_one, list_two):
+    list_one = set(list_one.split(","))
+    list_two = set(list_two.split(","))
     return list_one.intersection(list_two)
 
-def calculate_stats(list_one: list, list_two: list):
+def calculate_stats(list_one, list_two):
     list_one = list_one.split(",")
     list_two = list_two.split(",")
     print(f"List 1 Min: {min(list_one)}")
@@ -51,7 +48,7 @@ def calculate_stats(list_one: list, list_two: list):
     print(f"List 2 Max: {max(list_two)}")
     print(f"List 2 Length: {len(list_two)}")
     
-def sort_lists(list_one: list, list_two: list):
+def sort_lists(list_one, list_two):
     list_one = list_one.split(",")
     list_two = list_two.split(",")
     combined_list = list_one + list_two
@@ -70,15 +67,15 @@ elif operation == 'Mul':
     print(first_param, "*", second_param, "=", multiply(first_param, second_param))
 elif operation == 'Div':
     print(first_param, "/", second_param, "=", divide(first_param, second_param))
-elif operation == 'Union':
+elif operation.upper() == 'UNION':
     print(f"Union: {union(first_param, second_param)}")
-elif operation == 'Intersection':
+elif operation.upper() == 'INTERSECTION':
     print(f"Intersection: {intersection(first_param, second_param)}")
-elif operation == 'Difference':
+elif operation.upper() == 'DIFFERENCE':
     print(f"Difference: {difference(first_param, second_param)}")
-elif operation == 'Sort':
+elif operation.upper() == 'SORT':
     print(sort_lists(first_param, second_param))
-elif operation == 'Stats':
+elif operation.upper() == 'STATS':
     print(calculate_stats(first_param, second_param))
 else:
     print("Unknown operation.")
