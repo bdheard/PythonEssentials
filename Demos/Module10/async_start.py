@@ -6,17 +6,19 @@
 
 import time
 
-def count():
-    print("One")
-    time.sleep(1)
-    print("Two")
+def long_running_function(i):
+    print(f"Start function run no. {i}")
+    time.sleep(3)
+    print(f"End function run no. {i}")
 
 def main():
-    for _ in range(3):
-        count()
+    for i in range(3):
+        long_running_function(i)
 
 if __name__ == "__main__":
-    s = time.perf_counter()
+    start_time = time.perf_counter()
     main()
-    elapsed = time.perf_counter() - s
-    print(f"{__file__} executed in {elapsed:0.2f} seconds.")
+    end_time = time.perf_counter()
+    elapsed = end_time - start_time
+
+    print(f"Program executed in {elapsed:0.2f} seconds.")

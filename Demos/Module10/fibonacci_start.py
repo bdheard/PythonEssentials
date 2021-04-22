@@ -9,11 +9,6 @@
 import time
 
 def seq_fib(n):
-    # if n = 0, say 0, if n = 1, say 1
-    if n in [0, 1]:
-        print(f'{n}: {n}')
-        print(f'Took {time.perf_counter() - start:.2f} seconds.')
-    
     # sequentially calculating fib(n)
     a, b = 1, 2
     i = 1

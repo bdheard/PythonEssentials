@@ -2,21 +2,23 @@
 # Async
 #
 
-# Asynchronous logic 
+# Synchronous logic 
 
+import time
 import asyncio
 
-async def count():
-    print("One")
+async def long_running_function(i):
+    print(f"Start function run no. {i}")
     await asyncio.sleep(1)
-    print("Two")
+    print(f"End function run no. {i}")
 
 async def main():
-    await asyncio.gather(count(), count(), count())
+    await asyncio.gather(long_running_function(1), long_running_function(2), long_running_function(3))
 
 if __name__ == "__main__":
-    import time
-    s = time.perf_counter()
+    start_time = time.perf_counter()
     asyncio.run(main())
-    elapsed = time.perf_counter() - s
-    print(f"{__file__} executed in {elapsed:0.2f} seconds.")
+    end_time = time.perf_counter()
+    elapsed = end_time - start_time
+
+    print(f"Program executed in {elapsed:0.2f} seconds.")
