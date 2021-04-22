@@ -135,7 +135,7 @@
 </tr>
 <tr class="even">
 <td>sub</td>
-<td>Replaces one or many matches with a string</td>
+<td>Replaces any matches with a string</td>
 </tr>
 </tbody>
 </table>
@@ -149,6 +149,7 @@
 <li>Characters with a special meaning</li>
 </ul>
 <table>
+<caption>notes tes: https://docs.python.org/2/library/re.html :::</caption>
 <thead>
 <tr class="header">
 <th>Character</th>
@@ -164,12 +165,12 @@
 </tr>
 <tr class="even">
 <td>\</td>
-<td>Signals a special sequence (use also to escape special characters)</td>
+<td>escape special characters</td>
 <td>"</td>
 </tr>
 <tr class="odd">
 <td>.</td>
-<td>Any character (except newline character)</td>
+<td>Any character (except newline)</td>
 <td>“he..o”</td>
 </tr>
 <tr class="even">
@@ -184,17 +185,17 @@
 </tr>
 <tr class="even">
 <td>*</td>
-<td>Zero or more occurrences</td>
+<td>Zero or more</td>
 <td>"aix*"</td>
 </tr>
 <tr class="odd">
 <td>+</td>
-<td>One or more occurrences</td>
+<td>One or more</td>
 <td>“aix+”</td>
 </tr>
 <tr class="even">
 <td>{}</td>
-<td>Exactly the specified number of occurrences</td>
+<td>Exact number of occurrences</td>
 <td>“al{2}”</td>
 </tr>
 <tr class="odd">
@@ -209,9 +210,6 @@
 </tr>
 </tbody>
 </table>
-<aside class="notes">
-<p>Notes: https://docs.python.org/2/library/re.html</p>
-</aside>
 </section>
 <section id="special-sequences" class="slide level2">
 <h2>Special Sequences</h2>
