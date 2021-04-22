@@ -14,9 +14,6 @@ title: Python Essentials
 
 ## Async Overview
 
-- Asynchronous IO (async IO): pattern that has implementations across many programming languages.
-- **async**/**await**: two new Python keywords that are used to define coroutines.
-- **asyncio**: the Python package to implement async pattern. 
 - Consider using with operations take a long time
 	- Web calls
 	- Network IO
@@ -27,7 +24,8 @@ title: Python Essentials
 
 ## Writing Async operations
 
-- async: Flag to create a coroutine (function with an await call)
+- **asyncio**: async package. 
+- async: Flags function with an await call.
 - await: "Pauses" code to wait for response
 - create_task: Creates a handle (or coroutine) and schedules execution
 
@@ -57,13 +55,18 @@ with will do automatically clean up, but we don't want it to clean up before we 
 
 :::
 
+## Web APIs
+
+![image](../media/api.png)
+
+:::notes
+:::
+
 ## Calling Web APIs Overview
 
 - You can call functions from programs hosted on web servers.
 - Need: Address or Endpoint, method name, and parameters.
 - Use request library
-
-![image](../media/api.png)
 
 :::notes
 Notes:
@@ -72,8 +75,7 @@ We don't want to stop everything just because one process is taking forever.
 
 ## Async and Calling Web APIs
 
-- By default, socket operations are blocking. 
-- requests.get(url) is not awaitable.
+- By default, requests.get(url) is not awaitable.
 - But, almost everything in **aiohttp** is an awaitable coroutine
 	- session.request()
 	- response.text()

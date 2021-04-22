@@ -19,30 +19,28 @@ title: Python Essentials
 - JSON is built on two structures:
   - Collections of key/value pairs.
   - lists of values.
-- Python json module helps you encode and decode JSON
+- json module 
 
 ::: notes
 :::
 
 ## Working with JSON
 
-**Key value:** "key":"value"
+- **Key value:** 
+  - "key":"value"
+- **Sub keys:** 
+  - {"key":{"subkey0":"subvalue0","subkey1":"subvalue1", …}
+- **List:** {"key":[listvalue0, listvalue1, listvalue2, …]}
 
 ```json
 "userName": "John Doe", 
 ```
-
-**Sub keys:** {"key":{"subkey0":"subvalue0","subkey1":"subvalue1", …}
-
 ```json
 "userName":
 {"firstName": "John",
  "lastName": "Doe", 
  "prefex": "MR"},
 ```
-
-**List:** {"key":[listvalue0, listvalue1, listvalue2, …]}
-
 ```json
 {"tags": ["bear", "polar", "animal", "mammal"] 
 ```
@@ -59,7 +57,8 @@ JSON Linters will format JSON so it easier to read by a human. The following web
 
 ## Retrieving JSON data
 
-**Key value:** 
+- **Key value:** 
+  - "key":"value"
 
 ```json
 "userName": "John Doe" 
@@ -69,7 +68,14 @@ JSON Linters will format JSON so it easier to read by a human. The following web
 print(results['userName'])
 ```
 
-**Sub keys:** 
+:::notes
+
+:::
+
+## Retrieving JSON data
+
+- **Sub keys:** 
+  - {"key":{"subkey0":"subvalue0","subkey1":"subvalue1", …}
 
 ```json
 "userName":
@@ -82,7 +88,14 @@ print(results['userName'])
 print(results['userName']['lastName'])
 ```
 
-**List:** 
+:::notes
+
+:::
+
+## Retrieving JSON data
+
+- **List:**
+ {"key":[listvalue0, listvalue1, listvalue2, …]}
 
 ```json
 {"tags": ["bear", "polar", "animal", "mammal"] 
@@ -93,7 +106,6 @@ print(results['description']['tags'][0])
 ```
 
 :::notes
-Notes:
 
 Output:
 - John Doe
