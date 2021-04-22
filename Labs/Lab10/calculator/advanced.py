@@ -94,13 +94,12 @@ class AdvancedCalculator(simple.SimpleCalculator):
         async with session.get(url, ssl = False) as response:
             return await response.text()
 
-    async def get_stock_price(self, arguments: arguments.Arguments):
-        stock_symbol = arguments.first_param
+    async def get_stock_price(self, stock_symbol: str):
         async with aiohttp.ClientSession() as session:
             html = await self.get_html(session, f'https://finance.yahoo.com/quote/{stock_symbol}?p={stock_symbol}')
             soup = bs4.BeautifulSoup(html, features="html.parser")
             price = soup.find('div',{'class': 'My(6px) Pos(r) smartphone_Mt(6px)'}).find('span').text
-            return price 
+            print(f'{stock_symbol} price: {price}') 
 
     def execute(self, operation: str, input_arguments: arguments.Arguments):
         
@@ -131,9 +130,16 @@ class AdvancedCalculator(simple.SimpleCalculator):
         elif operations.Operations[operation]  == operations.Operations.HIST:
             print(self.read_log_entry(input_arguments))
         elif operations.Operations[operation]  == operations.Operations.STOCK:
-            loop = asyncio.get_event_loop()
-            price = loop.run_until_complete(self.get_stock_price(input_arguments)) 
-            print(price)
+            
+            loop = asyncio.get_event_loop() # creating the event loop
+            # adding tasks to the task queue
+            tasks = [
+                loop.create_task(self.get_stock_price(input_arguments.first_param)),
+                loop.create_task(self.get_stock_price(input_arguments.second_param))
+            ]
+
+            # run the event loop until all tasks are complete
+            loop.run_until_complete(asyncio.wait(tasks))
         elif operations.Operations[operation]  == operations.Operations.QUIT:
             return
         else:

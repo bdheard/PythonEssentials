@@ -24,19 +24,19 @@ title: Python Essentials
 
 ## Writing Async operations
 
-- **asyncio**: async package. 
-- async: Flags function with an await call.
-- await: "Pauses" code to wait for response
-- create_task: Creates a handle (or coroutine) and schedules execution
+- asyncio package. 
+- async/await
+- create_task
 
 ```python
-async with aiohttp.ClientSession() as session:
-	
-	task_one = asyncio.create_task(load_data(session, 2))
-	task_two = asyncio.create_task(load_data(session, 3))
+async def load_data(session, delay):
+	async with aiohttp.ClientSession() as session:
+		
+		task_one = asyncio.create_task(load_data(session, 2))
+		task_two = asyncio.create_task(load_data(session, 3))
 
-	result_one = await task_one 
-	result_two = await task_two 
+		result_one = await task_one 
+		result_two = await task_two
 ```
 :::notes
 
@@ -62,23 +62,4 @@ with will do automatically clean up, but we don't want it to clean up before we 
 :::notes
 :::
 
-## Calling Web APIs Overview
 
-- You can call functions from programs hosted on web servers.
-- Need: Address or Endpoint, method name, and parameters.
-- Use request library
-
-:::notes
-Notes:
-We don't want to stop everything just because one process is taking forever.
-:::
-
-## Async and Calling Web APIs
-
-- By default, requests.get(url) is not awaitable.
-- But, almost everything in **aiohttp** is an awaitable coroutine
-	- session.request()
-	- response.text()
-
-:::notes
-:::
