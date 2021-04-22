@@ -115,7 +115,7 @@
 <li>Collections of key/value pairs.</li>
 <li>lists of values.</li>
 </ul></li>
-<li>Python json module helps you encode and decode JSON</li>
+<li>json module</li>
 </ul>
 <aside class="notes">
 
@@ -123,14 +123,22 @@
 </section>
 <section id="working-with-json-1" class="slide level2">
 <h2>Working with JSON</h2>
-<p><strong>Key value:</strong> “key”:“value”</p>
+<ul>
+<li><strong>Key value:</strong>
+<ul>
+<li>“key”:“value”</li>
+</ul></li>
+<li><strong>Sub keys:</strong>
+<ul>
+<li>{“key”:{“subkey0”:“subvalue0”,“subkey1”:“subvalue1”, …}</li>
+</ul></li>
+<li><strong>List:</strong> {“key”:[listvalue0, listvalue1, listvalue2, …]}</li>
+</ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="er">&quot;userName&quot;:</span> <span class="er">&quot;John</span> <span class="er">Doe&quot;,</span> </span></code></pre></div>
-<p><strong>Sub keys:</strong> {“key”:{“subkey0”:“subvalue0”,“subkey1”:“subvalue1”, …}</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="er">&quot;userName&quot;:</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;firstName&quot;</span><span class="fu">:</span> <span class="st">&quot;John&quot;</span><span class="fu">,</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a> <span class="dt">&quot;lastName&quot;</span><span class="fu">:</span> <span class="st">&quot;Doe&quot;</span><span class="fu">,</span> </span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a> <span class="dt">&quot;prefex&quot;</span><span class="fu">:</span> <span class="st">&quot;MR&quot;</span><span class="fu">}</span><span class="er">,</span></span></code></pre></div>
-<p><strong>List:</strong> {“key”:[listvalue0, listvalue1, listvalue2, …]}</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;tags&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;bear&quot;</span><span class="ot">,</span> <span class="st">&quot;polar&quot;</span><span class="ot">,</span> <span class="st">&quot;animal&quot;</span><span class="ot">,</span> <span class="st">&quot;mammal&quot;</span><span class="ot">]</span> </span></code></pre></div>
 <aside class="notes">
 <p>Notes:</p>
@@ -139,20 +147,43 @@
 </section>
 <section id="retrieving-json-data" class="slide level2">
 <h2>Retrieving JSON data</h2>
-<p><strong>Key value:</strong></p>
+<ul>
+<li><strong>Key value:</strong>
+<ul>
+<li>“key”:“value”</li>
+</ul></li>
+</ul>
 <div class="sourceCode" id="cb4"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="er">&quot;userName&quot;:</span> <span class="er">&quot;John</span> <span class="er">Doe&quot;</span> </span></code></pre></div>
 <div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(results[<span class="st">&#39;userName&#39;</span>])</span></code></pre></div>
-<p><strong>Sub keys:</strong></p>
+<aside class="notes">
+
+</aside>
+</section>
+<section id="retrieving-json-data-1" class="slide level2">
+<h2>Retrieving JSON data</h2>
+<ul>
+<li><strong>Sub keys:</strong>
+<ul>
+<li>{“key”:{“subkey0”:“subvalue0”,“subkey1”:“subvalue1”, …}</li>
+</ul></li>
+</ul>
 <div class="sourceCode" id="cb6"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="er">&quot;userName&quot;:</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;firstName&quot;</span><span class="fu">:</span> <span class="st">&quot;John&quot;</span><span class="fu">,</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a> <span class="dt">&quot;lastName&quot;</span><span class="fu">:</span> <span class="st">&quot;Doe&quot;</span><span class="fu">,</span> </span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a> <span class="dt">&quot;prefex&quot;</span><span class="fu">:</span> <span class="st">&quot;MR&quot;</span><span class="fu">}</span><span class="er">,</span></span></code></pre></div>
 <div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(results[<span class="st">&#39;userName&#39;</span>][<span class="st">&#39;lastName&#39;</span>])</span></code></pre></div>
-<p><strong>List:</strong></p>
+<aside class="notes">
+
+</aside>
+</section>
+<section id="retrieving-json-data-2" class="slide level2">
+<h2>Retrieving JSON data</h2>
+<ul>
+<li><strong>List:</strong> {“key”:[listvalue0, listvalue1, listvalue2, …]}</li>
+</ul>
 <div class="sourceCode" id="cb8"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;tags&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;bear&quot;</span><span class="ot">,</span> <span class="st">&quot;polar&quot;</span><span class="ot">,</span> <span class="st">&quot;animal&quot;</span><span class="ot">,</span> <span class="st">&quot;mammal&quot;</span><span class="ot">]</span> </span></code></pre></div>
 <div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(results[<span class="st">&#39;description&#39;</span>][<span class="st">&#39;tags&#39;</span>][<span class="dv">0</span>])</span></code></pre></div>
 <aside class="notes">
-<p>Notes:</p>
 <p>Output: - John Doe - Doe - bear</p>
 </aside>
 </section></section>

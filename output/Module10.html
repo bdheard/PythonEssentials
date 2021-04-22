@@ -108,9 +108,6 @@
 <section id="async-overview" class="slide level2">
 <h2>Async Overview</h2>
 <ul>
-<li>Asynchronous IO (async IO): pattern that has implementations across many programming languages.</li>
-<li><strong>async</strong>/<strong>await</strong>: two new Python keywords that are used to define coroutines.</li>
-<li><strong>asyncio</strong>: the Python package to implement async pattern.</li>
 <li>Consider using with operations take a long time
 <ul>
 <li>Web calls</li>
@@ -125,7 +122,8 @@
 <section id="writing-async-operations" class="slide level2">
 <h2>Writing Async operations</h2>
 <ul>
-<li>async: Flag to create a coroutine (function with an await call)</li>
+<li><strong>asyncio</strong>: async package.</li>
+<li>async: Flags function with an await call.</li>
 <li>await: “Pauses” code to wait for response</li>
 <li>create_task: Creates a handle (or coroutine) and schedules execution</li>
 </ul>
@@ -143,6 +141,15 @@
 <p><strong>Creating coroutines (functions using async/await):</strong> - async: Flag to create a coroutine (function with an await call) - await: “Pauses” code to wait for response</p>
 </aside>
 </section>
+<section id="web-apis" class="slide level2">
+<h2>Web APIs</h2>
+<figure>
+<img data-src="../media/api.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<aside class="notes">
+
+</aside>
+</section>
 <section id="calling-web-apis-overview" class="slide level2">
 <h2>Calling Web APIs Overview</h2>
 <ul>
@@ -150,9 +157,6 @@
 <li>Need: Address or Endpoint, method name, and parameters.</li>
 <li>Use request library</li>
 </ul>
-<figure>
-<img data-src="../media/api.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
-</figure>
 <aside class="notes">
 <p>Notes: We don’t want to stop everything just because one process is taking forever.</p>
 </aside>
@@ -160,8 +164,7 @@
 <section id="async-and-calling-web-apis" class="slide level2">
 <h2>Async and Calling Web APIs</h2>
 <ul>
-<li>By default, socket operations are blocking.</li>
-<li>requests.get(url) is not awaitable.</li>
+<li>By default, requests.get(url) is not awaitable.</li>
 <li>But, almost everything in <strong>aiohttp</strong> is an awaitable coroutine
 <ul>
 <li>session.request()</li>

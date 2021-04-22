@@ -21,12 +21,14 @@ print(msg)
 
 def print_hello(name: str):
     """
-    Greets the user by name
+    Greets the user using name
 	Parameters:
 		name (str): The name of the user
 	Returns:
 		str: The greeting
 	"""
     print('Hello, ' + name)
+
+
 
 print_hello('Daniel')

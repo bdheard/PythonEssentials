@@ -42,21 +42,18 @@ class SimpleCalculator():
 
 class AdvancedCalculator(SimpleCalculator):
     def union(self, arguments: Arguments):
-        from ast import literal_eval
-        list_one = set(literal_eval(arguments.first_param))
-        list_two = set(literal_eval(arguments.second_param))
+        list_one = set(arguments.first_param.split(","))
+        list_two = set(arguments.first_param.split(","))
         return list_one.union(list_two)
 
     def difference(self, arguments: Arguments):
-        from ast import literal_eval
-        list_one = set(literal_eval(arguments.first_param))
-        list_two = set(literal_eval(arguments.second_param))
+        list_one = set(arguments.first_param.split(","))
+        list_two = set(arguments.first_param.split(","))
         return list_one.difference(list_two)
 
     def intersection(self, arguments: Arguments):
-        from ast import literal_eval
-        list_one = set(literal_eval(arguments.first_param))
-        list_two = set(literal_eval(arguments.second_param))
+        list_one = set(arguments.first_param.split(","))
+        list_two = set(arguments.first_param.split(","))
         return list_one.intersection(list_two)
 
     def calculate_stats(self, arguments: Arguments):
@@ -79,7 +76,6 @@ class AdvancedCalculator(SimpleCalculator):
     def reduce_list(self, arguments: Arguments):
         from functools import reduce
         list_one = map(int,arguments.first_param.split(","))
-        even_filter_flag = bool(arguments.second_param)
         return reduce(lambda x, y: x + y, list_one)
 
     def map_list(self, arguments: Arguments):
@@ -104,7 +100,6 @@ class Operations(Enum):
 
 def main():
 
-    simple_calculator = SimpleCalculator()
     advanced_calculator = AdvancedCalculator()
 
     while(True):
@@ -114,13 +109,13 @@ def main():
         arguments = Arguments(first_param, second_param)
 
         if Operations[operation] is Operations.ADD:
-            print(first_param, "+", second_param, "=", simple_calculator.add(arguments))
+            print(first_param, "+", second_param, "=", advanced_calculator.add(arguments))
         elif Operations[operation]  == Operations.SUB:
-            print(first_param, "-", second_param, "=", simple_calculator.subtract(arguments))
+            print(first_param, "-", second_param, "=", advanced_calculator.subtract(arguments))
         elif Operations[operation]  == Operations.MUL:
-            print(first_param, "*", second_param, "=", simple_calculator.multiply(arguments))
+            print(first_param, "*", second_param, "=", advanced_calculator.multiply(arguments))
         elif Operations[operation]  == Operations.DIV:
-            print(first_param, "/", second_param, "=", simple_calculator.divide(arguments))
+            print(first_param, "/", second_param, "=", advanced_calculator.divide(arguments))
         elif Operations[operation]  == Operations.UNION:
             print(f"Union: {advanced_calculator.union(arguments)}")
         elif Operations[operation]  == Operations.INTER:

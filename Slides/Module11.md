@@ -24,7 +24,7 @@ title: Python Essentials
 | findall  | Returns a list containing all matches                             |
 | search   | Returns a Match object if there is a match anywhere in the string |
 | split    | Returns a list where the string has been split at each match      |
-| sub      | Replaces one or many matches with a string                        |
+| sub      | Replaces any matches with a string                                |
 
 :::notes
 Notes:
@@ -35,21 +35,21 @@ https://docs.python.org/2/library/re.html
 
 - Characters with a special meaning
 
-| Character |	Description	                                                     | Example        |
-|-----------|--------------------------------------------------------------------|----------------|
-| []        | A set of characters	                                             | "[a-m]"	      |
-| \	        | Signals a special sequence (use also to escape special characters) | "\d"	          |
-| .	        | Any character (except newline character)	                         | "he..o"	      |
-| ^	        | Starts with	                                                     | "^hello"	      |
-| $	        | Ends with	                                                         | "world$"	      |
-| *	        | Zero or more occurrences	                                         | "aix*"	      |
-| +	        | One or more occurrences	                                         | "aix+"	      |
-| {}        | Exactly the specified number of occurrences	                     | "al{2}"	      |
-| |	        | Either or	                                                         | "falls|stays"  |	
-| ()        | Capture and group	                                                 |                |
+| Character |	Description	                | Example      |
+|-----------|-------------------------------|--------------|
+| []        | A set of characters	        | "[a-m]"	   |
+| \	        | escape special characters     | "\d"	       |
+| .	        | Any character (except newline)| "he..o"	   |
+| ^	        | Starts with	                | "^hello"	   |
+| $	        | Ends with	                    | "world$"	   |
+| *	        | Zero or more	                | "aix*"	   |
+| +	        | One or more 	                | "aix+"	   |
+| {}        | Exact number of occurrences	| "al{2}"	   |
+| |	        | Either or	                    | "falls|stays"|	
+| ()        | Capture and group	            |              |
 
-:::notes
-Notes:
+:notes
+tes:
 https://docs.python.org/2/library/re.html
 :::
 

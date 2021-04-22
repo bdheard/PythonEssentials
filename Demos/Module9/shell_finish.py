@@ -9,7 +9,6 @@ from shutil import make_archive
 from zipfile import ZipFile
 
 def main():
-   
    # check if path exists
    if path.exists("textfile.txt"):
        # get paths to source and destinaton
@@ -25,7 +24,7 @@ def main():
 
        # rename file
        if not path.exists("newfile.txt"):
-        os.rename("textfile.txt","newfile.txt")
+           os.rename("textfile.txt","newfile.txt")
 
        # compressed directory into zip file
        file_source = path.realpath("textfile.txt.bak")
@@ -36,8 +35,6 @@ def main():
        with ZipFile("custom_zip.zip", "w") as newzip:
            newzip.write("textfile.txt")
            newzip.write("textfile.txt.bak")
-
-
 
 if __name__ == "__main__":
     main()

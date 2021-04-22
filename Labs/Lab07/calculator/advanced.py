@@ -1,20 +1,18 @@
 from calculator import arguments, simple
+from ast import literal_eval
 
 class AdvancedCalculator(simple.SimpleCalculator):
     def union(self, arguments: arguments.Arguments):
-        from ast import literal_eval
         list_one = set(literal_eval(arguments.first_param))
         list_two = set(literal_eval(arguments.second_param))
         return list_one.union(list_two)
 
     def difference(self, arguments: arguments.Arguments):
-        from ast import literal_eval
         list_one = set(literal_eval(arguments.first_param))
         list_two = set(literal_eval(arguments.second_param))
         return list_one.difference(list_two)
 
     def intersection(self, arguments: arguments.Arguments):
-        from ast import literal_eval
         list_one = set(literal_eval(arguments.first_param))
         list_two = set(literal_eval(arguments.second_param))
         return list_one.intersection(list_two)
